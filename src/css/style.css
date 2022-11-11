@@ -282,6 +282,8 @@ section#contact{
 }
 #svg-inverse{
   transform: rotate(180deg);
+}
+svg{
   z-index: -1;
 }
 .list-networks{
