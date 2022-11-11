@@ -156,6 +156,9 @@
     grid-template-columns: repeat(1, 1fr);
     gap: 10px;
   }
+  #contact form input[type=submit]{
+    width: 40%;
+  }
 }
 
 @media screen and (max-width: 400px) {
