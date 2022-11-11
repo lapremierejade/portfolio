@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="42.921" height="20.109" viewBox="0 0 42.921 20.109">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-width: 3px;
+      }
+    </style>
+  </defs>
+  <g id="Groupe_68" data-name="Groupe 68" transform="translate(-732.389 -3718.389)">
+    <line id="Ligne_1" data-name="Ligne 1" class="cls-1" x2="19.349" y2="15.887" transform="translate(734.5 3720.5)"/>
+    <line id="Ligne_2" data-name="Ligne 2" class="cls-1" x1="19.349" y2="15.887" transform="translate(753.849 3720.5)"/>
+  </g>
+</svg>

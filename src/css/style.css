@@ -1,0 +1,359 @@
+/* RESET */
+*, ::before, ::after{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root{
+  --black:black;
+  --white:#efefef;
+  --yellow:#fba120;
+  --pink:#cf6176;
+  --purple:#7078b9;
+  --dark-blue:#201e39;
+  --transition:all 0.4s ease;
+}
+
+@font-face {
+  font-family: "Louis George Cafe";
+  src: url('/src/fonts/Louis-George-Cafe.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Louis George Cafe";
+  src: url('/src/fonts/Louis-George-Cafe-Bold.ttf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+*::selection{
+  background-color: var(--yellow);
+}
+body{
+  font-family: 'Louis George Cafe';
+  font-weight: bold;
+}
+section:not(#hero):not(#contact){
+  padding: 50px 100px;
+}
+section h3{
+  margin-bottom: 60px;
+}
+h1{
+  font-size: 5em;
+}
+h2{
+  font-size: 2em;
+}
+h3{
+  font-size: 2em;
+}
+h4{
+  font-size: 1.6em;
+}
+h5{
+  font-size: 1.2em;
+}
+.galery{
+  display: grid;
+  width: 100%;
+}
+.card{
+  aspect-ratio: 16 /  9;
+  background-position: center;
+  background-size: 100%;
+  filter: grayscale(0.8);
+  transition: var(--transition);
+}
+.card:hover{
+  filter: grayscale(0);
+  background-size: 105%;
+  transition: var(--transition);
+}
+/* header */
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 100px;
+}
+header img{
+  width: 120px;
+  height: 120px;
+}
+#main-nav{
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 60px;
+}
+#main-nav a{
+  color: var(--black);
+  text-decoration: none;
+  font-size: 1.5em;
+}
+/* hero */
+#hero{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: calc(100vh - 220px);
+}
+#hero-title{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#hero-title h1{
+  text-transform: uppercase;
+}
+#hero-title h2{
+  text-transform: lowercase;
+}
+#hero-cta{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--yellow);
+  font-size: 1.5em;
+  width: 250px;
+  height: 60px;
+  border-radius: 999px;
+  text-decoration: none;
+  color: var(--black);
+}
+#hero-scroll{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#hero-scroll-anim{
+  margin-top: 20px;
+  animation: hero-scroll-anim 2s infinite ease-in-out;
+}
+/* anim icon scroll */
+@keyframes hero-scroll-anim {
+  0%,100%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(-10px);
+  }
+}
+/* creations */
+#creations .galery{
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+#creations .card{
+  border-radius: 5px;
+}
+.card-1,.card-6,.card-11{
+  background-image: url('https://www.naturepaysage.photo/wp-content/uploads/Nature-Paysage-portfolio-17-novembre-2019-0017-3.jpg');
+}
+.card-2,.card-7,.card-12{
+  background-image: url('https://ericheymans.b-cdn.net/wp-content/uploads/2012/08/dawn-field-grass-164025.jpg');
+}
+.card-3,.card-8,.card-9{
+  background-image: url('https://img.freepik.com/photos-gratuite/paysage-paisible-paisible-campagne-propre-flux_1417-1106.jpg?w=2000');
+}
+.card-4,.card-5,.card-10{
+  background-image: url('https://ceweblogfrbe.photoservices.nl/wp-content/uploads/2020/09/mark-harpur-K2s_YE031CA-unsplash-1-1024x683-1.jpg');
+}
+/* a propos */
+.about-tab{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 90px;
+}
+.about-case h4{
+  margin-bottom: 10px;
+}
+.about-case p{
+  text-align: justify;
+}
+.about-skills{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+}
+.about-skill{
+  display: flex;
+  flex: 1 0 48%;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.about-skill .img{
+  width: 50px;
+  min-width: 50px;
+  aspect-ratio: 1;
+  border-radius: 999px;
+}
+.about-skill p{
+  text-align: start;
+  line-height: 13px;
+}
+.about-img-1{background: var(--yellow);}
+.about-img-2{background: var(--pink);}
+.about-img-3{background: var(--purple);}
+.about-img-4{background: var(--dark-blue);}
+.about-img-5{background: var(--dark-blue);}
+.about-img-6{background: var(--yellow);}
+/* contact */
+section#contact{
+  display: flex;
+  flex-direction: column;
+  color: var(--white);
+}
+.contact-container{
+  background-color: var(--dark-blue);
+  padding: 0 100px;
+  display: flex;
+  flex-direction: row;
+}
+.contact-me{
+  width: 49%;
+}
+#contact form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  width: 90%;
+}
+#contact form div:not(form-line):not(form-names):not(form-subject){
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+#contact form .form-line{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+#contact form input:not(input[type=submit]), #contact form textarea, #contact form select{
+  background: transparent;
+  border: 3px solid var(--white);
+  border-radius: 5px;
+  outline: none;
+  color: var(--white);
+  resize: none;
+  font-family: "Louis George Cafe";
+  font-size: 1.3em;
+  padding: 3px;
+}
+#contact form input:not(input[type=submit]), #contact form select{
+  height: 50px;
+}
+#contact form textarea{
+  min-height: 150px;
+}
+#contact form option{
+  font-family: "Louis George Cafe";
+  background-color: var(--dark-blue);
+}
+#contact form input[type=submit]{
+  background-color: var(--pink);
+  width: 30%;
+  border: none;
+  border-radius: 999px;
+  font-size: 1.3em;
+  padding: 10px;
+  text-align: center;
+  color: var(--white);
+  font-family: "Louis George Cafe";
+  margin-top: 15px;
+}
+#contact .separator{
+  border-left: 2px solid var(--white);
+}
+.my-networks{
+  width: 49%;
+  padding-left: 5%;
+  display: flex;
+  flex-direction: column;
+}
+#svg-inverse{
+  transform: rotate(180deg);
+  z-index: -1;
+}
+.list-networks{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+.list-networks a{
+  text-decoration: none;
+  color: var(--white);
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.4em;
+  margin-bottom: 20px;
+}
+.list-networks a:first-child{
+  margin-top: 20px;
+}
+.list-networks img{
+  width: 50px;
+  aspect-ratio: 1;
+}
+.my-networks p{
+  text-align: justify;
+  font-size: 1.2em;
+  line-height: 1.5;
+  margin-top: 30px;
+}
+/* footer */
+footer{
+  padding: 0 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+footer div:first-child{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 60%;
+}
+footer ul{
+  list-style: none;
+}
+footer ul h4{
+  margin-bottom: 20px;
+}
+footer a{
+  text-decoration: none;
+  color: var(--black);
+}
+footer ul li{
+  margin-bottom: 10px;
+}
+footer div:nth-child(2){
+  width: 30%;
+}
+footer div:nth-child(2) img{
+  width: 60px;
+}
+footer div:nth-child(2) div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 20px;
+}
+footer div:nth-child(2) p{
+  margin-bottom: 20px;
+}

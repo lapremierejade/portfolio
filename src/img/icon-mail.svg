@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="70" height="56" viewBox="0 0 70 56">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #efefef;
+      }
+    </style>
+  </defs>
+  <path id="Icon_material-mail-outline" data-name="Icon material-mail-outline" class="cls-1" d="M66,6H10a6.991,6.991,0,0,0-6.965,7L3,55a7.021,7.021,0,0,0,7,7H66a7.021,7.021,0,0,0,7-7V13A7.021,7.021,0,0,0,66,6Zm0,49H10V20L38,37.5,66,20ZM38,30.5,10,13H66Z" transform="translate(-3 -6)"/>
+</svg>
