@@ -117,6 +117,7 @@
       <p>&copy; Neon Prod.uction • 2022 • <a href="/robert.html">for mme robert</a></p>
     </div>
   </footer>
+  <script src="src/js/main.js"></script>
 </body>
 
 </html>

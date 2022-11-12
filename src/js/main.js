@@ -1,3 +1,4 @@
+// menu burger
 const burger = document.querySelector('#burger');
 const span1 = document.querySelector('#burger-span-1');
 const span2 = document.querySelector('#burger-span-2');
@@ -10,4 +11,19 @@ burger.addEventListener('click', () => {
   span1.classList.toggle('span1Active');
   span2.classList.toggle('span2Active');
   span3.classList.toggle('span3Active');
+})
+
+// main nav fixed
+const header = document.querySelector('header');
+
+document.addEventListener('scroll', () => {
+  scrollPos = window.scrollY;
+
+  console.log(scrollPos);
+  if(scrollPos > 50){
+    header.classList.add('mainNavFixed');
+  }
+  else {
+    header.classList.remove('mainNavFixed');
+  }
 })

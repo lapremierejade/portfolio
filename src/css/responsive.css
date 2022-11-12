@@ -28,6 +28,12 @@
     padding: 25px;
     gap: 20px;
   }
+  #go-home{
+    margin: 10px 25px;
+  }
+  .mainNavFixed{
+    padding: 10px 25px;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -169,9 +175,6 @@
   }
   footer div:nth-child(2) p {
     text-align: center;
-  }
-  #go-home{
-    margin: 10px 25px;
   }
 }
 

@@ -84,13 +84,18 @@ h5 {
 /* header */
 header {
   display: flex;
+  top: 0;
   align-items: center;
   justify-content: space-between;
   padding: 50px 100px;
+  background-color: white;
+  z-index: 999;
+  transition: padding .2s linear;
 }
 header img {
   width: 120px;
-  height: 120px;
+  aspect-ratio: 1;
+  transition: width .2s linear;
 }
 #main-nav {
   display: flex;
@@ -102,6 +107,17 @@ header img {
   color: var(--black);
   text-decoration: none;
   font-size: 1.5em;
+}
+.mainNavFixed{
+  position: fixed;
+  width: 100%;
+  padding: 10px 100px;
+  transition: padding .2s linear;
+}
+.mainNavFixed img{
+  width: 80px;
+  aspect-ratio: 1;
+  transition: width .2s linear;
 }
 /* hero */
 #hero {

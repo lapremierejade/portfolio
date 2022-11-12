@@ -209,22 +209,22 @@
     <div>
       <ul>
         <h4>Navigation</h4>
-        <a href="/">
+        <a href="/portfolio-jade/">
           <li>Accueil</li>
         </a>
-        <a href="/index.html#creations">
+        <a href="#creations">
           <li>Créations</li>
         </a>
-        <a href="/index.html#a-propos">
+        <a href="#a-propos">
           <li>À propos</li>
         </a>
-        <a href="/index.html#contact">
+        <a href="#contact">
           <li>Contact</li>
         </a>
       </ul>
       <ul>
         <h4>Me contacter</h4>
-        <a href="/index.html#contact">
+        <a href="#contact">
           <li>Formulaire de contact</li>
         </a>
         <a href="mailto:jade33.r@gmail.com">
@@ -239,10 +239,10 @@
       </ul>
       <ul>
         <h4>Informations légales</h4>
-        <a href="/mentions-légales.html">
+        <a href="/portfolio-jade/mentions-légales.html">
           <li>Mentions légales</li>
         </a>
-        <a href="/cookies.html">
+        <a href="/portfolio-jade/cookies.html">
           <li>Cookies</li>
         </a>
       </ul>
@@ -254,7 +254,7 @@
         <a href="" target="_blank"><img src="src/img/spoun.png" alt="logo de spoun"></a>
       </div>
       <p>Designed and developed by <a href="https://axelmarcial.com/" target="_blank">lepremieraxel</a>, <a href="https://victormoncassin.com/" target="_blank">.racoon</a>, <a href="">Spoun</a> et Neon Prod.uction.</p>
-      <p>&copy; Neon Prod.uction • 2022 • <a href="/robert.html">for mme robert</a></p>
+      <p>&copy; Neon Prod.uction • 2022 • <a href="robert.html">for mme robert</a></p>
     </div>
   </footer>
   <script src="src/js/main.js"></script>
