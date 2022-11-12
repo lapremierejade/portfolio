@@ -209,7 +209,7 @@
     <div>
       <ul>
         <h4>Navigation</h4>
-        <a href="/portfolio-jade/">
+        <a href="/">
           <li>Accueil</li>
         </a>
         <a href="#creations">
@@ -239,10 +239,10 @@
       </ul>
       <ul>
         <h4>Informations légales</h4>
-        <a href="/portfolio-jade/mentions-légales.html">
+        <a href="mentions-légales.html">
           <li>Mentions légales</li>
         </a>
-        <a href="/portfolio-jade/cookies.html">
+        <a href="cookies.html">
           <li>Cookies</li>
         </a>
       </ul>
