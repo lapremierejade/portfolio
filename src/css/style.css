@@ -39,7 +39,7 @@ body {
   font-weight: bold;
 }
 section:not(#hero):not(#contact) {
-  padding: 50px 100px;
+  padding: 100px;
 }
 section h3 {
   margin-bottom: 60px;

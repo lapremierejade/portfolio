@@ -209,7 +209,7 @@
     <div>
       <ul>
         <h4>Navigation</h4>
-        <a href="/">
+        <a href="#hero">
           <li>Accueil</li>
         </a>
         <a href="#creations">
