@@ -1,0 +1,23 @@
+/* RESET */
+*, ::before, ::after{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+div{
+  margin: 50px;
+  width: 20%;
+  aspect-ratio: 16 / 9;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: grayscale(0.8);
+}
+img{
+  width: 100%;
+}
+div:hover{
+  filter: grayscale(0);
+}

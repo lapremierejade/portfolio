@@ -1,119 +1,128 @@
 /* RESET */
-*, ::before, ::after{
+*,
+::before,
+::after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
 }
 
-:root{
-  --black:black;
-  --white:#efefef;
-  --yellow:#fba120;
-  --pink:#cf6176;
-  --purple:#7078b9;
-  --dark-blue:#201e39;
-  --transition:all 0.4s ease;
+:root {
+  --black: black;
+  --white: #efefef;
+  --yellow: #fba120;
+  --pink: #cf6176;
+  --purple: #7078b9;
+  --dark-blue: #201e39;
+  --transition: all 0.5s ease;
 }
 
 @font-face {
   font-family: "Louis George Cafe";
-  src: url('/src/fonts/Louis-George-Cafe.ttf');
+  src: url("../fonts/Louis-George-Cafe.ttf");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Louis George Cafe";
-  src: url('/src/fonts/Louis-George-Cafe-Bold.ttf');
+  src: url("../fonts/Louis-George-Cafe-Bold.ttf");
   font-weight: bold;
   font-style: normal;
 }
 
-*::selection{
+*::selection {
   background-color: var(--yellow);
 }
-body{
-  font-family: 'Louis George Cafe';
+body {
+  font-family: "Louis George Cafe";
   font-weight: bold;
 }
-section:not(#hero):not(#contact){
+section:not(#hero):not(#contact) {
   padding: 50px 100px;
 }
-section h3{
+section h3 {
   margin-bottom: 60px;
 }
-h1{
+h1 {
   font-size: 5em;
 }
-h2{
+h2 {
   font-size: 2em;
 }
-h3{
+h3 {
   font-size: 2em;
 }
-h4{
+h4 {
   font-size: 1.6em;
 }
-h5{
+h5 {
   font-size: 1.2em;
 }
-.galery{
+.galery {
   display: grid;
   width: 100%;
 }
-.card{
-  aspect-ratio: 16 /  9;
-  background-position: center;
-  background-size: 100%;
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
   filter: grayscale(0.8);
-  transition: var(--transition);
+  transition: all 0.5s 0.3s ease;
 }
-.card:hover{
+.card img {
+  width: 100%;
+  border-radius: 5px;
+}
+.card:hover {
   filter: grayscale(0);
-  background-size: 105%;
   transition: var(--transition);
 }
 /* header */
-header{
+header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 50px 100px;
 }
-header img{
+header img {
   width: 120px;
   height: 120px;
 }
-#main-nav{
+#main-nav {
   display: flex;
   align-items: center;
   justify-content: end;
   gap: 60px;
 }
-#main-nav a{
+#main-nav a {
   color: var(--black);
   text-decoration: none;
   font-size: 1.5em;
 }
 /* hero */
-#hero{
+#hero {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
   height: calc(100vh - 220px);
 }
-#hero-title{
+#hero-title {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-#hero-title h1{
+#hero-title h1 {
   text-transform: uppercase;
 }
-#hero-title h2{
+#hero-title h2 {
   text-transform: lowercase;
 }
-#hero-cta{
+#hero-cta {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -125,120 +134,120 @@ header img{
   text-decoration: none;
   color: var(--black);
 }
-#hero-scroll{
+#hero-scroll {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-#hero-scroll-anim{
+#hero-scroll-anim {
   margin-top: 20px;
   animation: hero-scroll-anim 2s infinite ease-in-out;
 }
 /* anim icon scroll */
 @keyframes hero-scroll-anim {
-  0%,100%{
+  0%,
+  100% {
     transform: translateY(0);
   }
-  50%{
+  50% {
     transform: translateY(-10px);
   }
 }
 /* creations */
-#creations .galery{
+#creations .galery {
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
 }
-#creations .card{
-  border-radius: 5px;
-}
-.card-1,.card-6,.card-11{
-  background-image: url('https://www.naturepaysage.photo/wp-content/uploads/Nature-Paysage-portfolio-17-novembre-2019-0017-3.jpg');
-}
-.card-2,.card-7,.card-12{
-  background-image: url('https://ericheymans.b-cdn.net/wp-content/uploads/2012/08/dawn-field-grass-164025.jpg');
-}
-.card-3,.card-8,.card-9{
-  background-image: url('https://img.freepik.com/photos-gratuite/paysage-paisible-paisible-campagne-propre-flux_1417-1106.jpg?w=2000');
-}
-.card-4,.card-5,.card-10{
-  background-image: url('https://ceweblogfrbe.photoservices.nl/wp-content/uploads/2020/09/mark-harpur-K2s_YE031CA-unsplash-1-1024x683-1.jpg');
-}
 /* a propos */
-.about-tab{
+.about-tab {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 90px;
 }
-.about-case h4{
+.about-case h4 {
   margin-bottom: 10px;
 }
-.about-case p{
+.about-case p {
   text-align: justify;
 }
-.about-skills{
+.about-skills {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   gap: 10px;
   width: 100%;
 }
-.about-skill{
+.about-skill {
   display: flex;
   flex: 1 0 48%;
   flex-direction: row;
   align-items: center;
   gap: 10px;
 }
-.about-skill .img{
+.about-skill .img {
   width: 50px;
   min-width: 50px;
   aspect-ratio: 1;
   border-radius: 999px;
 }
-.about-skill p{
+.about-skill p {
   text-align: start;
   line-height: 13px;
 }
-.about-img-1{background: var(--yellow);}
-.about-img-2{background: var(--pink);}
-.about-img-3{background: var(--purple);}
-.about-img-4{background: var(--dark-blue);}
-.about-img-5{background: var(--dark-blue);}
-.about-img-6{background: var(--yellow);}
+.about-img-1 {
+  background: var(--yellow);
+}
+.about-img-2 {
+  background: var(--pink);
+}
+.about-img-3 {
+  background: var(--purple);
+}
+.about-img-4 {
+  background: var(--dark-blue);
+}
+.about-img-5 {
+  background: var(--dark-blue);
+}
+.about-img-6 {
+  background: var(--yellow);
+}
 /* contact */
-section#contact{
+#contact {
   display: flex;
   flex-direction: column;
   color: var(--white);
 }
-.contact-container{
+.contact-container {
   background-color: var(--dark-blue);
   padding: 0 100px;
   display: flex;
   flex-direction: row;
 }
-.contact-me{
+.contact-me {
   width: 49%;
 }
-#contact form{
+#contact form {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 25px;
   width: 90%;
 }
-#contact form div:not(form-line):not(form-names):not(form-subject){
+#contact form div:not(form-line):not(form-names):not(form-subject) {
   display: flex;
   flex-direction: column;
   width: 100%;
   gap: 10px;
 }
-#contact form .form-line{
+#contact form .form-line {
   display: flex;
   flex-direction: row;
   gap: 20px;
 }
-#contact form input:not(input[type=submit]), #contact form textarea, #contact form select{
+#contact form input:not(input[type="submit"]),
+#contact form textarea,
+#contact form select {
   background: transparent;
   border: 3px solid var(--white);
   border-radius: 5px;
@@ -249,17 +258,18 @@ section#contact{
   font-size: 1.3em;
   padding: 3px;
 }
-#contact form input:not(input[type=submit]), #contact form select{
+#contact form input:not(input[type="submit"]),
+#contact form select {
   height: 50px;
 }
-#contact form textarea{
+#contact form textarea {
   min-height: 150px;
 }
-#contact form option{
+#contact form option {
   font-family: "Louis George Cafe";
   background-color: var(--dark-blue);
 }
-#contact form input[type=submit]{
+#contact form input[type="submit"] {
   background-color: var(--pink);
   width: 30%;
   border: none;
@@ -271,28 +281,26 @@ section#contact{
   font-family: "Louis George Cafe";
   margin-top: 15px;
 }
-#contact .separator{
+#contact .separator {
   border-left: 2px solid var(--white);
 }
-.my-networks{
+.my-networks {
   width: 49%;
   padding-left: 5%;
   display: flex;
   flex-direction: column;
 }
-#svg-inverse{
-  transform: rotate(180deg);
-}
-svg{
+#svg-inverse {
+  transform: rotate(180deg) translateY(2px);
   z-index: -1;
 }
-.list-networks{
+.list-networks {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   width: 100%;
 }
-.list-networks a{
+.list-networks a {
   text-decoration: none;
   color: var(--white);
   list-style-type: none;
@@ -303,59 +311,177 @@ svg{
   font-size: 1.4em;
   margin-bottom: 20px;
 }
-.list-networks a:first-child{
+.list-networks a:first-child {
   margin-top: 20px;
 }
-.list-networks img{
+.list-networks img {
   width: 50px;
   aspect-ratio: 1;
 }
-.my-networks p{
+.my-networks p {
   text-align: justify;
   font-size: 1.2em;
   line-height: 1.5;
   margin-top: 30px;
 }
 /* footer */
-footer{
-  padding: 0 100px;
+footer {
+  padding: 50px 100px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
+  gap: 50px;
 }
-footer div:first-child{
+footer div:first-child {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 60%;
 }
-footer ul{
+footer ul {
   list-style: none;
 }
-footer ul h4{
+footer ul h4 {
   margin-bottom: 20px;
 }
-footer a{
+footer a {
   text-decoration: none;
   color: var(--black);
 }
-footer ul li{
+footer ul li {
   margin-bottom: 10px;
 }
-footer div:nth-child(2){
-  width: 30%;
+footer div:nth-child(2) {
+  width: 40%;
 }
-footer div:nth-child(2) img{
-  width: 60px;
+footer div:nth-child(2) div:first-child a {
+  background-color: white;
+  border-radius: 999px;
+  overflow: hidden;
+  width: 70px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-footer div:nth-child(2) div{
+footer div:nth-child(2) img {
+  width: 50px;
+}
+footer div:nth-child(2) div {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   width: 100%;
   margin-bottom: 20px;
 }
-footer div:nth-child(2) p{
+footer div:nth-child(2) p:nth-child(2) {
   margin-bottom: 20px;
+}
+/* page */
+/* go home */
+#go-home {
+  display: flex;
+  margin: 25px 100px;
+  padding: 10px;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--black);
+}
+/* presentation */
+#presentation {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  gap: 50px;
+}
+#presentation .card {
+  width: 40%;
+  filter: grayscale(0);
+}
+#presentation div:nth-child(2) {
+  width: 40%;
+}
+#presentation-title {
+  margin-bottom: 20px;
+}
+#presentation div:nth-child(2) h1 {
+  font-size: 1.7em;
+}
+#presentation div:nth-child(2) h2 {
+  font-size: 1em;
+}
+#presentation div:nth-child(2) p {
+  font-size: 1.1em;
+  text-align: justify;
+  line-height: 1.4;
+}
+#presentation div:nth-child(3) {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  width: 20%;
+}
+#presentation div:nth-child(3) a {
+  text-decoration: none;
+  color: var(--black);
+  font-size: 1.3em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px;
+}
+#presentation div:nth-child(3) img {
+  width: 50px;
+}
+/* galery */
+#galery .galery {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+/* prev next */
+#prev-next {
+  display: flex;
+  flex-flow: row;
+  width: 100%;
+  justify-content: space-between;
+}
+#prev-next a {
+  display: flex;
+  flex-flow: row;
+  width: 50%;
+  align-items: center;
+  gap: 20px;
+  text-decoration: none;
+  color: var(--black);
+}
+#prev-next .card {
+  width: 30%;
+  transition: var(--transition);
+}
+#prev-next-title {
+  display: flex;
+  flex-flow: column;
+  gap: 20px;
+}
+#prev-next #prev-inverse {
+  flex-direction: row-reverse;
+}
+#prev-inverse #svg {
+  transform: rotate(180deg);
+}
+#prev-inverse #prev-next-title {
+  text-align: end;
+}
+/* footer page */
+#svg-footer {
+  transform: translateY(15px);
+  z-index: -1;
+}
+#footer-page {
+  background-color: var(--dark-blue);
+  color: var(--white);
+}
+#footer-page a {
+  color: var(--white);
 }
