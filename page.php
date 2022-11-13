@@ -24,13 +24,13 @@
     $prepare = $db->prepare('SELECT * FROM creations WHERE id = ?');
     $prepare->execute(array($creaId));
     $creation = $prepare->fetch();
-    // print_r($creation);
+    // print_r($creations);
     $tabNumImg = explode(",", $creation['imgs']);
     // print_r($tabNumImg);
     $numImg = array_slice($tabNumImg, 0, 1);
-    $imageSelected = $db->prepare('SELECT * FROM images WHERE id = ?');
-    $imageSelected->execute($numImg);
-    $image = $imageSelected->fetch();
+    $imageSelect = $db->prepare('SELECT * FROM images WHERE id = ?');
+    $imageSelect->execute($numImg);
+    $image = $imageSelect->fetch();
     // print_r($image['link']);
     $tabNumUser = explode(",", $creation['users']);
     // print_r($tabNumUser);
@@ -46,9 +46,9 @@
     <div>
       <a href=""><img src="src/img/main-logo.png" alt="logo de neon production">Néon Prod.uction</a>
       <?php foreach ($tabNumUser as $numUser) {
-        $userSelected = $db->prepare('SELECT * FROM users WHERE id = ?');
-        $userSelected->execute(array($numUser));
-        $user = $userSelected->fetch();
+        $userSelect = $db->prepare('SELECT * FROM users WHERE id = ?');
+        $userSelect->execute(array($numUser));
+        $user = $userSelect->fetch();
         // print_r($user);
         echo '<a href="' . $user['link'] . '" target="_blank"><img src="' . $user['img'] . '">' . $user['name'] . '</a>';
       } ?>
@@ -57,32 +57,62 @@
   <section id="galery">
     <h3>Galerie</h3>
     <div class="galery">
-      <?php foreach($tabNumImg as $numImg){
-        $imageSelected = $db->prepare('SELECT * FROM images WHERE id = ?');
-        $imageSelected->execute(array($numImg));
-        $image = $imageSelected->fetch();
+      <?php foreach ($tabNumImg as $numImg) {
+        $imageSelect->execute(array($numImg));
+        $image = $imageSelect->fetch();
         // print_r($image);
-        echo '<div class="card"><img src="'.$image['link'].'"></div>';
+        echo '<div class="card"><img src="' . $image['link'] . '"></div>';
       } ?>
     </div>
   </section>
   <section id="prev-next">
-    <a href="">
+    <?php
+    // $prepare = $db->query('SELECT COUNT(*) FROM creations');
+    // $nbCreaTab = $prepare->fetch();
+    // $nbCrea = intval($nbCreaTab);
+    // print_r($nbCrea);
+    $prepare = $db->query('SELECT id FROM creations');
+    $tabCreaId = $prepare->fetchAll();
+    $minId = array_shift($tabCreaId);
+    $maxId = array_pop($tabCreaId);
+    // print_r($minId);
+    // print_r($maxId);
+    $prepare = $db->prepare('SELECT * FROM creations WHERE id = ?');
+    if ($creaId > $minId[0]) {
+      $prepare->execute(array($creaId - 1));
+      $creaPrev = $prepare->fetch();
+      $tabNumImg = explode(",", $creaPrev['imgs']);
+      $numImg = array_slice($tabNumImg, 0, 1);
+      $imageSelect->execute($numImg);
+      $image = $imageSelect->fetch();
+      // print_r($creaPrev);
+      echo '<a href="page.php?id=' . $creaPrev['id'] . '&title=' . $creaPrev['title'] . '">
       <img src="src/img/prev-next-arrow.svg">
-      <div class="card"><img src="https://www.naturepaysage.photo/wp-content/uploads/Nature-Paysage-portfolio-17-novembre-2019-0017-3.jpg" alt=""></div>
+      <div class="card"><img src="' . $image['link'] . '"></div>
       <div id="prev-next-title">
         <h4>Précédent</h4>
-        <h5>Lorem ipsum dolor sit amet</h5>
+        <h5>' . $creaPrev['title'] . '</h5>
       </div>
-    </a>
-    <a href="" id="prev-inverse">
+    </a>';
+    }
+    if ($creaId < $maxId[0]) {
+      $prepare->execute(array($creaId + 1));
+      $creaNext = $prepare->fetch();
+      $tabNumImg = explode(",", $creaNext['imgs']);
+      $numImg = array_slice($tabNumImg, 0, 1);
+      $imageSelect->execute($numImg);
+      $image = $imageSelect->fetch();
+      // print_r($creaNext);
+      echo '<a href="page.php?id=' . $creaNext['id'] . '&title=' . $creaNext['title'] . '" id="prev-inverse">
       <img id="svg" src="src/img/prev-next-arrow.svg">
-      <div class="card"><img src="https://www.naturepaysage.photo/wp-content/uploads/Nature-Paysage-portfolio-17-novembre-2019-0017-3.jpg" alt=""></div>
+      <div class="card"><img src="' . $image['link'] . '"></div>
       <div id="prev-next-title">
         <h4>Suivant</h4>
-        <h5>Lorem ipsum dolor sit amet</h5>
+        <h5>' . $creaNext['title'] . '</h5>
       </div>
-    </a>
+    </a>';
+    } else echo '';
+    ?>
   </section>
   <img id="svg-footer" src="src/img/wave.svg">
   <footer id="footer-page">
@@ -119,7 +149,7 @@
       </ul>
       <ul>
         <h4>Informations légales</h4>
-        <a href="mentions-légales.html">
+        <a href="mentions-legales.html">
           <li>Mentions légales</li>
         </a>
         <a href="cookies.html">

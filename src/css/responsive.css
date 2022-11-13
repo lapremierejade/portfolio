@@ -28,16 +28,16 @@
     padding: 25px;
     gap: 20px;
   }
-  #go-home{
+  #go-home {
     margin: 10px 25px;
   }
-  .mainNavFixed{
+  .mainNavFixed {
     padding: 10px 25px;
   }
 }
 
 @media screen and (max-width: 1200px) {
-  #presentation{
+  #presentation {
     flex-flow: row wrap;
     justify-content: start;
     gap: 50px;
@@ -47,13 +47,14 @@
     justify-content: space-between;
     width: 100%;
   }
-  #presentation.card,#presentation div:nth-child(2) {
+  #presentation.card,
+  #presentation div:nth-child(2) {
     width: 54%;
   }
   #galery .galery {
     grid-template-columns: repeat(3, 1fr);
   }
-  #prev-next-title h5{
+  #prev-next-title h5 {
     display: none;
   }
 }
@@ -133,7 +134,7 @@
   .card {
     filter: grayscale(0);
   }
-  .card:hover img{
+  .card:hover img {
     width: 100%;
   }
   .about-tab {
@@ -181,8 +182,9 @@
   }
 }
 
-@media screen and (max-width: 890px){
-  #presentation .card, #presentation div:nth-child(2){
+@media screen and (max-width: 890px) {
+  #presentation .card,
+  #presentation div:nth-child(2) {
     width: 100%;
   }
   #galery .galery {
@@ -216,14 +218,14 @@
   #galery .galery {
     grid-template-columns: repeat(1, 1fr);
   }
-  #prev-next{
+  #prev-next {
     flex-flow: column;
     gap: 20px;
   }
-  #prev-next #prev-inverse{
+  #prev-next #prev-inverse {
     align-self: flex-end;
   }
-  #prev-next a{
+  #prev-next a {
     width: 100%;
     justify-content: space-between;
   }
@@ -236,10 +238,10 @@
   #hero-title h2 {
     font-size: 1.3em;
   }
-  #prev-next .card{
+  #prev-next .card {
     display: none;
   }
-  #prev-next a{
+  #prev-next a {
     justify-content: initial;
   }
 }

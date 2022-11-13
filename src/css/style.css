@@ -82,7 +82,7 @@ h5 {
   filter: grayscale(0);
   transition: var(--transition);
 }
-.card:hover img{
+.card:hover img {
   width: 110%;
   transition: var(--transition);
 }
@@ -95,12 +95,12 @@ header {
   padding: 50px 100px;
   background-color: white;
   z-index: 999;
-  transition: padding .2s linear;
+  transition: padding 0.2s linear;
 }
 header img {
   width: 120px;
   aspect-ratio: 1;
-  transition: width .2s linear;
+  transition: width 0.2s linear;
 }
 #main-nav {
   display: flex;
@@ -113,16 +113,16 @@ header img {
   text-decoration: none;
   font-size: 1.5em;
 }
-.mainNavFixed{
+.mainNavFixed {
   position: fixed;
   width: 100%;
   padding: 10px 100px;
-  transition: padding .2s linear;
+  transition: padding 0.2s linear;
 }
-.mainNavFixed img{
+.mainNavFixed img {
   width: 80px;
   aspect-ratio: 1;
-  transition: width .2s linear;
+  transition: width 0.2s linear;
 }
 /* hero */
 #hero {
@@ -301,6 +301,7 @@ header img {
   color: var(--white);
   font-family: "Louis George Cafe";
   margin-top: 15px;
+  cursor: pointer;
 }
 #contact .separator {
   border-left: 2px solid var(--white);
@@ -412,7 +413,7 @@ footer div:nth-child(2) p:nth-child(2) {
   background-color: white;
   z-index: 999;
 }
-.goHomeFixed{
+.goHomeFixed {
   position: fixed;
   top: 25px;
 }
@@ -427,7 +428,7 @@ footer div:nth-child(2) p:nth-child(2) {
   width: 40%;
   filter: grayscale(0);
 }
-#presentation .card:hover img{
+#presentation .card:hover img {
   width: 100%;
 }
 #presentation div:nth-child(2) {
@@ -490,7 +491,7 @@ footer div:nth-child(2) p:nth-child(2) {
   width: 30%;
   transition: var(--transition);
 }
-#prev-next .card img{
+#prev-next .card img {
   transition: var(--transition);
 }
 #prev-next-title {
@@ -500,6 +501,7 @@ footer div:nth-child(2) p:nth-child(2) {
 }
 #prev-next #prev-inverse {
   flex-direction: row-reverse;
+  justify-self: end;
 }
 #prev-inverse #svg {
   transform: rotate(180deg);

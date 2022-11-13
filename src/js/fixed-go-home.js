@@ -1,13 +1,12 @@
-const goHome = document.querySelector('#go-home');
+const goHome = document.querySelector("#go-home");
 
-document.addEventListener('scroll', () => {
+document.addEventListener("scroll", () => {
   scrollPos = window.scrollY;
 
   // console.log(scrollPos);
-  if(scrollPos > 100){
-    goHome.classList.add('goHomeFixed');
+  if (scrollPos > 100) {
+    goHome.classList.add("goHomeFixed");
+  } else {
+    goHome.classList.remove("goHomeFixed");
   }
-  else {
-    goHome.classList.remove('goHomeFixed');
-  }
-})
+});

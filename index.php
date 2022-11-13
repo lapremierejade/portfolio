@@ -22,7 +22,7 @@
       <h1>Neon Prod.uction</h1>
       <h2>Jade • 20 • mmi • tarbes/bdx/tlse</h2>
     </div>
-    <a href="#" id="hero-cta">Contacte moi</a>
+    <a href="#contact" id="hero-cta">Contacte moi</a>
     <div id="hero-scroll">
       <img src="src/img/scroll-icon.svg">
       <img id="hero-scroll-anim" src="src/img/down-arrow.svg">
@@ -127,29 +127,29 @@
     <div class="contact-container">
       <div class="contact-me">
         <h3>Me contacter</h3>
-        <form action="" method="post">
+        <form action="src/php/form.php" method="post">
           <div class="form-line form-names">
             <div>
               <label for="name">Nom</label>
-              <input type="text" name="name" id="name">
+              <input type="text" name="name" id="name" required>
             </div>
             <div>
               <label for="firstname">Prénom</label>
-              <input type="text" name="firstname" id="firstname">
+              <input type="text" name="firstname" id="firstname" required>
             </div>
           </div>
           <div>
             <label for="email">Adresse email</label>
-            <input type="email" name="email" id="email">
+            <input type="email" name="email" id="email" required>
           </div>
           <div class="form-line form-subject">
             <div>
               <label for="subject">Objet du message</label>
-              <input type="text" name="subject" id="subject">
+              <input type="text" name="subject" id="subject" required>
             </div>
             <div>
               <label for="motif">Motif</label>
-              <select name="motif" id="motif">
+              <select name="motif" id="motif" required>
                 <option value="">Choisissez un motif</option>
                 <option value="infos">Informations</option>
                 <option value="order">Prestations</option>
@@ -159,7 +159,7 @@
           </div>
           <div>
             <label for="message">Message</label>
-            <textarea name="message" id="message"></textarea>
+            <textarea name="message" id="message" required></textarea>
           </div>
           <input type="submit" value="Envoyer">
         </form>
@@ -242,7 +242,7 @@
       </ul>
       <ul>
         <h4>Informations légales</h4>
-        <a href="mentions-légales.html">
+        <a href="mentions-legales.html">
           <li>Mentions légales</li>
         </a>
         <a href="cookies.html">
