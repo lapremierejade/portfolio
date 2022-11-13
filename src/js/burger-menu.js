@@ -12,18 +12,3 @@ burger.addEventListener('click', () => {
   span2.classList.toggle('span2Active');
   span3.classList.toggle('span3Active');
 })
-
-// main nav fixed
-const header = document.querySelector('header');
-
-document.addEventListener('scroll', () => {
-  scrollPos = window.scrollY;
-
-  console.log(scrollPos);
-  if(scrollPos > 50){
-    header.classList.add('mainNavFixed');
-  }
-  else {
-    header.classList.remove('mainNavFixed');
-  }
-})

@@ -19,31 +19,51 @@
   <?php include("src/includes/header.html") ?>
   <a href="index.php" id="go-home"><img src="src/img/arrow.svg">Retourner à l'accueil</a>
   <section id="presentation">
-    <div class="card"><img src="https://www.naturepaysage.photo/wp-content/uploads/Nature-Paysage-portfolio-17-novembre-2019-0017-3.jpg" alt=""></div>
+    <?php require_once('src/php/config.php');
+    $creaId = $_GET['id'];
+    $prepare = $db->prepare('SELECT * FROM creations WHERE id = ?');
+    $prepare->execute(array($creaId));
+    $creation = $prepare->fetch();
+    // print_r($creation);
+    $tabNumImg = explode(",", $creation['imgs']);
+    // print_r($tabNumImg);
+    $numImg = array_slice($tabNumImg, 0, 1);
+    $imageSelected = $db->prepare('SELECT * FROM images WHERE id = ?');
+    $imageSelected->execute($numImg);
+    $image = $imageSelected->fetch();
+    // print_r($image['link']);
+    $tabNumUser = explode(",", $creation['users']);
+    // print_r($tabNumUser);
+    ?>
+    <div class="card"><img src="<?php echo $image['link'] ?>" alt=""></div>
     <div>
       <div id="presentation-title">
-        <h1>NEON PROD.UCTION Portfolio</h1>
-        <h2>site web • html, css, js, php, mysql</h2>
+        <h1><?php echo $creation['title'] ?></h1>
+        <h2><?php echo $creation['type'] . " • " . $creation['tool'] ?></h2>
       </div>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque turpis vitae ipsum rutrum, eu vestibulum sapien posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur ornare turpis vel massa fringilla dapibus. Nulla facilisi. Donec ut massa sollicitudin, convallis odio a, commodo magna. Maecenas tempor molestie suscipit. Sed vehicula elit at lacus imperdiet faucibus.</p>
+      <p><?php echo $creation['text'] ?></p>
     </div>
     <div>
       <a href=""><img src="src/img/main-logo.png" alt="logo de neon production">Néon Prod.uction</a>
-      <a href=""><img src="src/img/racoon.svg" alt="logo de racoon">.racoon</a>
-      <a href=""><img src="src/img/lepremieraxel.png" alt="logo de lepremieraxel">lepremieraxel</a>
-      <a href=""><img src="src/img/spoun.png" alt="logo de spoun">Spoun</a>
+      <?php foreach ($tabNumUser as $numUser) {
+        $userSelected = $db->prepare('SELECT * FROM users WHERE id = ?');
+        $userSelected->execute(array($numUser));
+        $user = $userSelected->fetch();
+        // print_r($user);
+        echo '<a href="' . $user['link'] . '" target="_blank"><img src="' . $user['img'] . '">' . $user['name'] . '</a>';
+      } ?>
     </div>
   </section>
   <section id="galery">
     <h3>Galerie</h3>
     <div class="galery">
-      <div class="card"><img src="https://www.naturepaysage.photo/wp-content/uploads/Nature-Paysage-portfolio-17-novembre-2019-0017-3.jpg" alt=""></div>
-      <div class="card"><img src="https://www.naturepaysage.photo/wp-content/uploads/Nature-Paysage-portfolio-17-novembre-2019-0017-3.jpg" alt=""></div>
-      <div class="card"><img src="https://www.naturepaysage.photo/wp-content/uploads/Nature-Paysage-portfolio-17-novembre-2019-0017-3.jpg" alt=""></div>
-      <div class="card"><img src="https://www.naturepaysage.photo/wp-content/uploads/Nature-Paysage-portfolio-17-novembre-2019-0017-3.jpg" alt=""></div>
-      <div class="card"><img src="https://www.naturepaysage.photo/wp-content/uploads/Nature-Paysage-portfolio-17-novembre-2019-0017-3.jpg" alt=""></div>
-      <div class="card"><img src="https://www.naturepaysage.photo/wp-content/uploads/Nature-Paysage-portfolio-17-novembre-2019-0017-3.jpg" alt=""></div>
-      <div class="card"><img src="https://www.naturepaysage.photo/wp-content/uploads/Nature-Paysage-portfolio-17-novembre-2019-0017-3.jpg" alt=""></div>
+      <?php foreach($tabNumImg as $numImg){
+        $imageSelected = $db->prepare('SELECT * FROM images WHERE id = ?');
+        $imageSelected->execute(array($numImg));
+        $image = $imageSelected->fetch();
+        // print_r($image);
+        echo '<div class="card"><img src="'.$image['link'].'"></div>';
+      } ?>
     </div>
   </section>
   <section id="prev-next">
@@ -117,7 +137,8 @@
       <p>&copy; Neon Prod.uction • 2022 • <a href="robert.html">for mme robert</a></p>
     </div>
   </footer>
-  <script src="src/js/main.js"></script>
+  <script src="src/js/burger-menu.js"></script>
+  <script src="src/js/fixed-go-home.js"></script>
 </body>
 
 </html>

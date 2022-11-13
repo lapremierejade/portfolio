@@ -133,6 +133,9 @@
   .card {
     filter: grayscale(0);
   }
+  .card:hover img{
+    width: 100%;
+  }
   .about-tab {
     grid-template-columns: repeat(1, 1fr);
   }

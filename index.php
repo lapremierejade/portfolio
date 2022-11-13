@@ -31,20 +31,23 @@
   <section id="creations">
     <h3>Mes créations</h3>
     <div class="galery">
-      <a href="page.php">
-        <div class="card"><img src="https://www.naturepaysage.photo/wp-content/uploads/Nature-Paysage-portfolio-17-novembre-2019-0017-3.jpg" alt=""></div>
-      </a>
-      <div class="card"><img src="https://www.naturepaysage.photo/wp-content/uploads/Nature-Paysage-portfolio-17-novembre-2019-0017-3.jpg" alt=""></div>
-      <div class="card"><img src="https://www.naturepaysage.photo/wp-content/uploads/Nature-Paysage-portfolio-17-novembre-2019-0017-3.jpg" alt=""></div>
-      <div class="card"><img src="https://www.naturepaysage.photo/wp-content/uploads/Nature-Paysage-portfolio-17-novembre-2019-0017-3.jpg" alt=""></div>
-      <div class="card"><img src="https://www.naturepaysage.photo/wp-content/uploads/Nature-Paysage-portfolio-17-novembre-2019-0017-3.jpg" alt=""></div>
-      <div class="card"><img src="https://www.naturepaysage.photo/wp-content/uploads/Nature-Paysage-portfolio-17-novembre-2019-0017-3.jpg" alt=""></div>
-      <div class="card"><img src="https://www.naturepaysage.photo/wp-content/uploads/Nature-Paysage-portfolio-17-novembre-2019-0017-3.jpg" alt=""></div>
-      <div class="card"><img src="https://www.naturepaysage.photo/wp-content/uploads/Nature-Paysage-portfolio-17-novembre-2019-0017-3.jpg" alt=""></div>
-      <div class="card"><img src="https://www.naturepaysage.photo/wp-content/uploads/Nature-Paysage-portfolio-17-novembre-2019-0017-3.jpg" alt=""></div>
-      <div class="card"><img src="https://www.naturepaysage.photo/wp-content/uploads/Nature-Paysage-portfolio-17-novembre-2019-0017-3.jpg" alt=""></div>
-      <div class="card"><img src="https://www.naturepaysage.photo/wp-content/uploads/Nature-Paysage-portfolio-17-novembre-2019-0017-3.jpg" alt=""></div>
-      <div class="card"><img src="https://www.naturepaysage.photo/wp-content/uploads/Nature-Paysage-portfolio-17-novembre-2019-0017-3.jpg" alt=""></div>
+      <?php require_once('src/php/config.php');
+      $prepare = $db->prepare('SELECT * FROM creations');
+      $prepare->execute();
+      $creations = $prepare->fetchAll();
+      // print_r($creations);
+      foreach ($creations as $creation) {
+        // print_r($creation);
+        $tabNumImg = explode(",", $creation['imgs']);
+        // print_r($tabNumImg);
+        $numImg = array_slice($tabNumImg, 0, 1);
+        $imageSelected = $db->prepare('SELECT * FROM images WHERE id = ?');
+        $imageSelected->execute($numImg);
+        $image = $imageSelected->fetch();
+        // print_r($image['link']);
+        echo '<a href="page.php?id=' . $creation['id'] . '&title=' . $creation['title'] . '"><div class="card"><img src="' . $image['link'] . '"></div></a>';
+      }
+      ?>
     </div>
   </section>
   <section id="a-propos">
@@ -257,7 +260,8 @@
       <p>&copy; Neon Prod.uction • 2022 • <a href="robert.html">for mme robert</a></p>
     </div>
   </footer>
-  <script src="src/js/main.js"></script>
+  <script src="src/js/burger-menu.js"></script>
+  <script src="src/js/fixed-nav.js"></script>
 </body>
 
 </html>
