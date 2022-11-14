@@ -26,10 +26,9 @@ if (isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email']
   }
 
   $to = 'hello@axelmarcial.com';
-  $object = 'Nouveau message de ' . $firstname . ' ' . $name . '.';
+  $object = '[PORTFOLIO] - Nouveau message de ' . $firstname . ' ' . $name . '.';
   $content = "<html>
   <head>
-      <title>[PORTFOLIO] - Nouveau message</title>
       <style type='text/css'>
           body{
               background-color: transparent;
