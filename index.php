@@ -127,6 +127,17 @@
     <div class="contact-container">
       <div class="contact-me">
         <h3>Me contacter</h3>
+        <?php if(isset($_GET['send'])){
+          $send = htmlspecialchars($_GET['send']);
+          switch($send){
+            case 'true':
+              echo "Votre message a bien été envoyé.";
+              break;
+            case 'false':
+              echo "Votre message n'a pas été envoyé.";
+              break;
+          }
+        } ?>
         <form action="src/php/form.php" method="post">
           <div class="form-line form-names">
             <div>
