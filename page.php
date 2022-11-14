@@ -67,10 +67,6 @@
   </section>
   <section id="prev-next">
     <?php
-    // $prepare = $db->query('SELECT COUNT(*) FROM creations');
-    // $nbCreaTab = $prepare->fetch();
-    // $nbCrea = intval($nbCreaTab);
-    // print_r($nbCrea);
     $prepare = $db->query('SELECT id FROM creations');
     $tabCreaId = $prepare->fetchAll();
     $minId = array_shift($tabCreaId);
@@ -119,22 +115,22 @@
     <div>
       <ul>
         <h4>Navigation</h4>
-        <a href="/">
+        <a href="/#hero">
           <li>Accueil</li>
         </a>
-        <a href="#creations">
+        <a href="#/creations">
           <li>Créations</li>
         </a>
-        <a href="#a-propos">
+        <a href="/#a-propos">
           <li>À propos</li>
         </a>
-        <a href="#contact">
+        <a href="/#contact">
           <li>Contact</li>
         </a>
       </ul>
       <ul>
         <h4>Me contacter</h4>
-        <a href="#contact">
+        <a href="/#contact">
           <li>Formulaire de contact</li>
         </a>
         <a href="mailto:jade33.r@gmail.com">
@@ -168,7 +164,6 @@
     </div>
   </footer>
   <script src="src/js/burger-menu.js"></script>
-  <script src="src/js/fixed-go-home.js"></script>
 </body>
 
 </html>

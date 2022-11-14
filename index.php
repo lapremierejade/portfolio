@@ -20,7 +20,7 @@
   <section id="hero">
     <div id="hero-title">
       <h1>Neon Prod.uction</h1>
-      <h2>Jade • 20 • mmi • tarbes/bdx/tlse</h2>
+      <h2>Jade • 20 • mmi • Tarbes/Bdx/Tlse</h2>
     </div>
     <a href="#contact" id="hero-cta">Contacte moi</a>
     <div id="hero-scroll">
@@ -212,22 +212,22 @@
     <div>
       <ul>
         <h4>Navigation</h4>
-        <a href="#hero">
+        <a href="/#hero">
           <li>Accueil</li>
         </a>
-        <a href="#creations">
+        <a href="/#creations">
           <li>Créations</li>
         </a>
-        <a href="#a-propos">
+        <a href="/#a-propos">
           <li>À propos</li>
         </a>
-        <a href="#contact">
+        <a href="/#contact">
           <li>Contact</li>
         </a>
       </ul>
       <ul>
         <h4>Me contacter</h4>
-        <a href="#contact">
+        <a href="/#contact">
           <li>Formulaire de contact</li>
         </a>
         <a href="mailto:jade33.r@gmail.com">
@@ -261,7 +261,6 @@
     </div>
   </footer>
   <script src="src/js/burger-menu.js"></script>
-  <script src="src/js/fixed-nav.js"></script>
 </body>
 
 </html>
