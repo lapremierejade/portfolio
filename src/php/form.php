@@ -2,7 +2,7 @@
 
 if (isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email']) && isset($_POST['subject']) && isset($_POST['motif']) && isset($_POST['message']) && !empty($_POST['name']) && !empty($_POST['firstname']) && !empty($_POST['email']) && !empty($_POST['subject']) && !empty($_POST['motif']) && !empty($_POST['message'])) {
 
-  header('Location:../../?send=true#contact');
+  header('Location:/?send=true#contact');
 
   $name = htmlspecialchars($_POST['name']);
   $firstname = htmlspecialchars($_POST['firstname']);
@@ -63,4 +63,4 @@ if (isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email']
   // echo $subject;
   // echo $motif;
   // echo $message;
-} else header('Location:../../?send=false#contact');
+} else header('Location:/?send=false#contact');

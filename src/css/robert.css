@@ -1,0 +1,25 @@
+.container{
+  padding: 120px 100px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 100vh;
+}
+table, th, td{
+  border: 2px solid black;
+  border-collapse: collapse;
+  text-align: center;
+}
+td{
+  font-weight: lighter;
+}
+th, td{
+  padding: 5px;
+}
+div{
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  gap: 10px;
+}

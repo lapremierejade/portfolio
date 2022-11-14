@@ -2,15 +2,7 @@
 <html lang="fr">
 
 <head>
-  <!-- META -->
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- LINK -->
-  <link rel="stylesheet" href="src/css/style.css">
-  <link rel="stylesheet" href="src/css/responsive.css">
-  <!-- IMAGES -->
-  <link rel="shortcut icon" href="src/img/favicon.ico" type="image/x-icon">
+<?php include("src/includes/head.html"); ?>
   <!-- TITLE -->
   <title>accueil • neon prod.uction</title>
 </head>
@@ -22,10 +14,10 @@
       <h1>Neon Prod.uction</h1>
       <h2>Jade • 20 • mmi • Tarbes/Bdx/Tlse</h2>
     </div>
-    <a href="#contact" id="hero-cta">Contacte moi</a>
+    <a href="/#contact" id="hero-cta">Contacte moi</a>
     <div id="hero-scroll">
-      <img src="src/img/scroll-icon.svg">
-      <img id="hero-scroll-anim" src="src/img/down-arrow.svg">
+      <img src="/src/img/scroll-icon.svg">
+      <img id="hero-scroll-anim" src="/src/img/down-arrow.svg">
     </div>
   </section>
   <section id="creations">
@@ -123,13 +115,13 @@
     </div>
   </section>
   <section id="contact">
-    <img src="src/img/wave.svg">
+    <img src="/src/img/wave.svg">
     <div class="contact-container">
       <div class="contact-me">
         <h3>Me contacter</h3>
-        <?php if(isset($_GET['send'])){
+        <?php if (isset($_GET['send'])) {
           $send = htmlspecialchars($_GET['send']);
-          switch($send){
+          switch ($send) {
             case 'true':
               echo "<p class='form-alert form-true'>Votre message a bien été envoyé.</p>";
               break;
@@ -138,7 +130,7 @@
               break;
           }
         } ?>
-        <form action="src/php/form.php" method="post">
+        <form action="/src/php/form.php" method="post">
           <div class="form-line form-names">
             <div>
               <label for="name">Nom</label>
@@ -182,34 +174,34 @@
           <ul>
             <a href="https://www.instagram.com/neonprod.uction/" target="_blank">
               <li>
-                <img src="src/img/icon-instagram.svg">
+                <img src="/src/img/icon-instagram.svg">
               </li> @neonprod.uction
             </a>
             <a href="https://www.youtube.com/channel/UCzvOMfwEUwTLJBRwL_BTdwA" target="_blank">
               <li>
-                <img src="src/img/icon-youtube.svg">
+                <img src="/src/img/icon-youtube.svg">
               </li> @neonprod.uction
             </a>
             <a href="mailto:jade33.r@gmail.com">
               <li>
-                <img src="src/img/icon-mail.svg">
+                <img src="/src/img/icon-mail.svg">
               </li> jade33.r@gmail.com
             </a>
           </ul>
           <ul>
             <a href="https://goo.gl/maps/KobiuMbs4Hce6NQm6" target="_blank">
               <li>
-                <img src="src/img/icon-map-pin.svg">
+                <img src="/src/img/icon-map-pin.svg">
               </li> Tarbes
             </a>
             <a href="https://goo.gl/maps/utnZJoMK8hrNWiJZ7" target="_blank">
               <li>
-                <img src="src/img/icon-map-pin.svg">
+                <img src="/src/img/icon-map-pin.svg">
               </li> Bordeaux
             </a>
             <a href="https://goo.gl/maps/u2bf4KQyxWwQFGGA7" target="_blank">
               <li>
-                <img src="src/img/icon-map-pin.svg">
+                <img src="/src/img/icon-map-pin.svg">
               </li> Toulouse
             </a>
           </ul>
@@ -217,7 +209,7 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque turpis vitae ipsum rutrum, eu vestibulum sapien posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur ornare turpis vel massa fringilla dapibus. Nulla facilisi. Donec ut massa sollicitudin, convallis odio a, commodo magna. Maecenas tempor molestie suscipit. Sed vehicula elit at lacus imperdiet faucibus.</p>
       </div>
     </div>
-    <img src="src/img/wave.svg" id="svg-inverse">
+    <img src="/src/img/wave.svg" id="svg-inverse">
   </section>
   <footer>
     <div>
@@ -253,25 +245,33 @@
       </ul>
       <ul>
         <h4>Informations légales</h4>
-        <a href="mentions-legales.html">
+        <a href="/src/pages/mentions-legales.php">
           <li>Mentions légales</li>
         </a>
-        <a href="cookies.html">
+        <a href="/src/pages/cookies.php">
           <li>Cookies</li>
         </a>
       </ul>
     </div>
     <div>
       <div>
-        <a href="https://axelmarcial.com/" target="_blank"><img src="src/img/lepremieraxel.png" alt="logo de lepremieraxel"></a>
-        <a href="https://victormoncassin.com/" target="_blank"><img src="src/img/racoon.svg" alt="logo de .racoon"></a>
-        <a href="" target="_blank"><img src="src/img/spoun.png" alt="logo de spoun"></a>
+        <a href="https://axelmarcial.com/" target="_blank"><img src="/src/img/lepremieraxel.png" alt="logo de lepremieraxel" /></a>
+        <a href="https://victormoncassin.com/" target="_blank"><img src="/src/img/racoon.svg" alt="logo de .racoon" /></a>
+        <a href="" target="_blank"><img src="/src/img/spoun.png" alt="logo de spoun" /></a>
       </div>
-      <p>Designed and developed by <a href="https://axelmarcial.com/" target="_blank">lepremieraxel</a>, <a href="https://victormoncassin.com/" target="_blank">.racoon</a>, <a href="">Spoun</a> et Neon Prod.uction.</p>
-      <p>&copy; Neon Prod.uction • 2022 • <a href="robert.html">for mme robert</a></p>
+      <p>
+        Designed and developed by
+        <a href="https://axelmarcial.com/" target="_blank">lepremieraxel</a>,
+        <a href="https://victormoncassin.com/" target="_blank">.racoon</a>,
+        <a href="">Spoun</a> et Neon Prod.uction.
+      </p>
+      <p>
+        &copy; Neon Prod.uction • 2022 •
+        <a href="/src/pages/robert.php">for mme robert</a>
+      </p>
     </div>
   </footer>
-  <script src="src/js/burger-menu.js"></script>
+  <script src="/src/js/burger-menu.js"></script>
 </body>
 
 </html>
