@@ -294,6 +294,21 @@ header img {
   margin-top: 15px;
   cursor: pointer;
 }
+.form-alert{
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 90%;
+  text-align: center;
+  border-radius: 5px;
+}
+.form-true{
+  background-color: rgba(0, 255, 0, 0.5);
+  border: 2px solid rgba(0, 255, 0, 0.541);
+}
+.form-false{
+  background-color: rgba(255, 0, 0, 0.5);
+  border: 2px solid rgba(255, 0, 0, 0.541);
+}
 #contact .separator {
   border-left: 2px solid var(--white);
 }

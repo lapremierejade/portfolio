@@ -131,10 +131,10 @@
           $send = htmlspecialchars($_GET['send']);
           switch($send){
             case 'true':
-              echo "Votre message a bien été envoyé.";
+              echo "<p class='form-alert form-true'>Votre message a bien été envoyé.</p>";
               break;
             case 'false':
-              echo "Votre message n'a pas été envoyé.";
+              echo "<p class='form-alert form-false'>Votre message n'a pas été envoyé. Veuillez remplir tous les champs et réessayez.</p>";
               break;
           }
         } ?>
