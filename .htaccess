@@ -3,3 +3,4 @@ RewriteEngine On
 RewriteCond %{SERVER_PORT} 80
 RewriteRule ^(.*)$ https://neonprod.axelmarcial.com/$1 [R,L]
 RewriteRule ^creations/([^/]+)$ page.php?title=$1 [L]
+RewriteRule ^pages/([^/]+)$ src/pages/$1.php [L]

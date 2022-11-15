@@ -245,10 +245,10 @@
       </ul>
       <ul>
         <h4>Informations légales</h4>
-        <a href="/src/pages/mentions-legales.php">
+        <a href="/pages/mentions-legales">
           <li>Mentions légales</li>
         </a>
-        <a href="/src/pages/cookies.php">
+        <a href="/pages/cookies">
           <li>Cookies</li>
         </a>
       </ul>
@@ -267,7 +267,7 @@
       </p>
       <p>
         &copy; Neon Prod.uction • 2022 •
-        <a href="/src/pages/robert.php">for mme robert</a>
+        <a href="/pages/a-propos-mmi">for mme robert</a>
       </p>
     </div>
   </footer>
