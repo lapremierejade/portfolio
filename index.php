@@ -37,7 +37,7 @@
         $imageSelected->execute($numImg);
         $image = $imageSelected->fetch();
         // print_r($image['link']);
-        echo '<a href="page.php?id=' . $creation['id'] . '&title=' . $creation['title'] . '"><div class="card"><img src="' . $image['link'] . '"></div></a>';
+        echo '<a href="/creations/' . $creation['title'] . '"><div class="card"><img src="' . $image['link'] . '"></div></a>';
       }
       ?>
     </div>
@@ -215,7 +215,7 @@
     <div>
       <ul>
         <h4>Navigation</h4>
-        <a href="/#hero">
+        <a href="/">
           <li>Accueil</li>
         </a>
         <a href="/#creations">

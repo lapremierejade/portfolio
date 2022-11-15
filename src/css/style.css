@@ -443,6 +443,7 @@ footer div:nth-child(2) p:nth-child(2) {
 }
 #presentation div:nth-child(2) h1 {
   font-size: 1.7em;
+  text-transform: capitalize;
 }
 #presentation div:nth-child(2) h2 {
   font-size: 1em;
