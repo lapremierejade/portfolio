@@ -6,6 +6,7 @@
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
+  font-family: "Louis George Cafe";
 }
 
 :root {
@@ -35,7 +36,6 @@
   background-color: var(--yellow);
 }
 body {
-  font-family: "Louis George Cafe";
   font-weight: bold;
 }
 section:not(#hero):not(#contact) {
@@ -266,7 +266,6 @@ header img {
   outline: none;
   color: var(--white);
   resize: none;
-  font-family: "Louis George Cafe";
   font-size: 1.3em;
   padding: 3px;
 }
@@ -278,7 +277,6 @@ header img {
   min-height: 150px;
 }
 #contact form option {
-  font-family: "Louis George Cafe";
   background-color: var(--dark-blue);
 }
 #contact form input[type="submit"] {
@@ -290,22 +288,21 @@ header img {
   padding: 10px;
   text-align: center;
   color: var(--white);
-  font-family: "Louis George Cafe";
   margin-top: 15px;
   cursor: pointer;
 }
-.form-alert{
+.form-alert {
   padding: 10px;
   margin-bottom: 20px;
   width: 90%;
   text-align: center;
   border-radius: 5px;
 }
-.form-true{
+.form-true {
   background-color: rgba(0, 255, 0, 0.5);
   border: 2px solid rgba(0, 255, 0, 0.541);
 }
-.form-false{
+.form-false {
   background-color: rgba(255, 0, 0, 0.5);
   border: 2px solid rgba(255, 0, 0, 0.541);
 }
@@ -525,4 +522,52 @@ footer div:nth-child(2) p:nth-child(2) {
 }
 #footer-page a {
   color: var(--white);
+}
+/* admin */
+.container {
+  padding: 100px 0;
+}
+/* form add */
+.add .section-line{
+  display: flex;
+  flex-flow: row;
+}
+.add form {
+  display: flex;
+  flex-flow: column;
+  width: 60%;
+  gap: 30px;
+}
+.add form div {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  gap: 10px;
+}
+.add form span {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  gap: 10px;
+}
+.add input, .add textarea{
+  outline: none;
+  height: 40px;
+  padding: 5px;
+  font-weight: bold;
+  border-radius: 5px;
+  border: 2px solid var(--black);
+}
+.add input[type=submit]{
+  background-color: var(--yellow);
+  width: fit-content;
+  padding: 0 20px;
+  border: none;
+  align-self: center;
+  cursor: pointer;
+}
+.add p{
+  width: 40%;
+  padding: 0 0 0 50px;
+  text-align: justify;
 }

@@ -35,15 +35,15 @@ $tabTitle = explode('-', $creation['title']);
     <div class="card"><img src="<?php echo $image['link'] ?>" alt=""></div>
     <div>
       <div id="presentation-title">
-        <h1><?php foreach($tabTitle as $title){
-          echo ''.$title.' ';
-        } ?></h1>
+        <h1><?php foreach ($tabTitle as $title) {
+              echo '' . $title . ' ';
+            } ?></h1>
         <h2><?php echo $creation['type'] . " • " . $creation['tool'] ?></h2>
       </div>
       <p><?php echo $creation['text'] ?></p>
     </div>
     <div>
-      <a href=""><img src="/src/img/main-logo.png" alt="logo de neon production">Néon Prod.uction</a>
+      <!-- <a href=""><img src="/src/img/main-logo.png" alt="logo de neon production">Néon Prod.uction</a> -->
       <?php foreach ($tabNumUser as $numUser) {
         $userSelect = $db->prepare('SELECT * FROM users WHERE id = ?');
         $userSelect->execute(array($numUser));
