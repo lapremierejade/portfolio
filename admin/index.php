@@ -57,7 +57,7 @@
               <input type="file" name="img-file" id="img-file" accept="image/*" required>
             </span>
           </div>
-          <input type="submit" value="Ajouter">
+          <input type="submit" name="submit" value="Ajouter">
         </form>
       </div>
     </section>
