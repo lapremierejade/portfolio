@@ -27,16 +27,12 @@
       $prepare = $db->prepare('SELECT * FROM creations');
       $prepare->execute();
       $creations = $prepare->fetchAll();
-      // print_r($creations);
       foreach ($creations as $creation) {
-        // print_r($creation);
         $tabNumImg = explode(",", $creation['imgs']);
-        // print_r($tabNumImg);
         $numImg = array_slice($tabNumImg, 0, 1);
         $imageSelected = $db->prepare('SELECT * FROM images WHERE id = ?');
         $imageSelected->execute($numImg);
         $image = $imageSelected->fetch();
-        // print_r($image['link']);
         echo '<a href="/creations/' . $creation['title'] . '"><div class="card"><img src="' . $image['link'] . '"></div></a>';
       }
       ?>
