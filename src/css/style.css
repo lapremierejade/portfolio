@@ -37,6 +37,7 @@
 }
 body {
   font-weight: bold;
+  overflow-x: hidden;
 }
 section:not(#hero):not(#contact) {
   padding: 100px;
@@ -65,6 +66,7 @@ h5 {
 }
 .card {
   display: flex;
+  flex-flow: column;
   align-items: center;
   justify-content: center;
   border-radius: 5px;
@@ -77,6 +79,7 @@ h5 {
   width: 100%;
   border-radius: 5px;
   transition: all 0.5s 0.2s ease;
+  z-index: 1;
 }
 .card:hover {
   filter: grayscale(0);
@@ -453,8 +456,8 @@ footer div:nth-child(2) p:nth-child(2) {
 #presentation div:nth-child(3) {
   display: flex;
   flex-flow: column;
-  justify-content: space-between;
   width: 20%;
+  gap: 10px;
 }
 #presentation div:nth-child(3) a {
   text-decoration: none;
@@ -557,6 +560,7 @@ footer div:nth-child(2) p:nth-child(2) {
   font-weight: bold;
   border-radius: 5px;
   border: 2px solid var(--black);
+  resize: vertical;
 }
 .add input[type=submit]{
   background-color: var(--yellow);
@@ -570,4 +574,65 @@ footer div:nth-child(2) p:nth-child(2) {
   width: 40%;
   padding: 0 0 0 50px;
   text-align: justify;
+}
+.all .galery {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.all .card{
+  filter: grayscale(0);
+}
+.all .card div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  gap: 10px;
+}
+.all .card:hover img{
+  opacity: 0;
+  width: 100%;
+  transition: all .3s ease;
+}
+.all .card:hover div{
+  z-index: 2;
+}
+.all .card a{
+  text-decoration: none;
+  color: var(--white);
+  padding: 5px 10px;
+  border-radius: 999px;
+  border: none;
+  font-size: medium;
+  cursor: pointer;
+}
+.see{
+  background-color: rgb(23, 73, 223);
+}
+.modify{
+  background-color: rgb(8, 150, 41);
+}
+.del-btn{
+  background-color: rgb(189, 18, 18);
+  border: none;
+  border-radius: 999px;
+  padding: 5px 10px;
+  color: var(--white);
+  cursor: pointer;
+  font-size: 16px;
+}
+.all ul{
+  list-style: none;
+  display: flex;
+  flex-flow: column;
+  gap: 30px;
+}
+.all ul li{
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  gap: 15px;
+}
+.all ul li img{
+  width: 50px;
 }

@@ -43,7 +43,6 @@ $tabTitle = explode('-', $creation['title']);
       <p><?php echo $creation['text'] ?></p>
     </div>
     <div>
-      <!-- <a href=""><img src="/src/img/main-logo.png" alt="logo de neon production">Néon Prod.uction</a> -->
       <?php foreach ($tabNumUser as $numUser) {
         $userSelect = $db->prepare('SELECT * FROM users WHERE id = ?');
         $userSelect->execute(array($numUser));
