@@ -18,7 +18,5 @@ if (isset($_POST['submit-images'])) {
     move_uploaded_file($tmp_name, $upload_path);
 
     header('Location:index.php?addi=true#add-images');
-  }
-  header('Location:index.php?addi=exist#add-images');
-}
-header('Location:index.php?addi=form#add-images');
+  } else header('Location:index.php?addi=exist#add-images');
+} else header('Location:index.php?addi=form#add-images');

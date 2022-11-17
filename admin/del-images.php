@@ -18,7 +18,5 @@ if (isset($_POST['submit-del-images'])) {
     unlink($image['link']);
 
     header('Location:index.php?deli=true#all-images');
-  }
-  header('Location:index.php?deli=dont-exist#all-images');
-}
-header('Location:index.php?deli=form#all-images');
+  } else header('Location:index.php?deli=dont-exist#all-images');
+} else header('Location:index.php?deli=form#all-images');

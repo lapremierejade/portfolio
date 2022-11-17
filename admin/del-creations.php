@@ -14,7 +14,5 @@ if (isset($_POST['submit-del-creations'])) {
     $delete = $db->prepare('DELETE FROM creations WHERE id = ?');
     $delete->execute(array($id));
     header('Location:index.php?delc=true#all-creations');
-  }
-  header('Location:index.php?delc=dont-exist#all-creations');
-}
-header('Location:index.php?delc=form#all-creations');
+  } else header('Location:index.php?delc=dont-exist#all-creations');
+} else header('Location:index.php?delc=form#all-creations');

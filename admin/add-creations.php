@@ -19,7 +19,5 @@ if (isset($_POST['title']) && isset($_POST['type']) && isset($_POST['tool']) && 
     $prepare = $db->prepare('INSERT INTO creations (title, type, tool, text, users, imgs) VALUES (:title, :type, :tool, :text, :users, :imgs)');
     $prepare->execute(array('title' => $title, 'type' => $type, 'tool' => $tool, 'text' => $text, 'users' => $users, 'imgs' => $imgs));
     header('Location:index.php?addc=true');
-  }
-  header('Location:index.php?addc=exist');
-}
-header('Location:index.php?addc=form');
+  } else header('Location:index.php?addc=exist');
+} else header('Location:index.php?addc=form');
