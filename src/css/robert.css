@@ -1,4 +1,4 @@
-.container{
+.container {
   padding: 120px 100px;
   display: flex;
   flex-flow: column;
@@ -6,18 +6,21 @@
   justify-content: space-around;
   height: 100vh;
 }
-table, th, td{
+table,
+th,
+td {
   border: 2px solid black;
   border-collapse: collapse;
   text-align: center;
 }
-td{
+td {
   font-weight: lighter;
 }
-th, td{
+th,
+td {
   padding: 5px;
 }
-div{
+div {
   text-align: center;
   display: flex;
   flex-flow: column;

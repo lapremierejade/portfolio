@@ -1,7 +1,7 @@
 <?php
 
 require_once '../src/php/config.php';
-// add images
+
 if (isset($_POST['submit-images'])) {
 
   $upload_dir = '../src/uploads/';
@@ -17,6 +17,8 @@ if (isset($_POST['submit-images'])) {
 
     move_uploaded_file($tmp_name, $upload_path);
 
-    header('Location:index.php?send=image#add-images');
-  } else header('Location:index.php?addi=exist#add-images');
-} else header('Location:index.php?addi=form#add-images');
+    header('Location:index.php?addi=true#add-images');
+  }
+  header('Location:index.php?addi=exist#add-images');
+}
+header('Location:index.php?addi=form#add-images');

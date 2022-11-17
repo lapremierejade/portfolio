@@ -4,7 +4,6 @@
 <head>
   <?php include("../includes/head.html"); ?>
   <link rel="stylesheet" href="/src/css/robert.css">
-  <!-- TITLE -->
   <title>à propos • neon prod.uction</title>
 </head>
 

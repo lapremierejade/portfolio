@@ -22,6 +22,6 @@ if (isset($_POST['submit-users']) && isset($_POST['link']) && !empty($_POST['lin
 
     move_uploaded_file($tmp_name, $upload_path);
 
-    header('Location:index.php?send=user#add-users');
+    header('Location:index.php?addu=true#add-users');
   }
 } else header('Location:index.php?addu=form#add-users');

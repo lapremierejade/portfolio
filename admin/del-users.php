@@ -17,6 +17,8 @@ if (isset($_POST['submit-del-users'])) {
 
     unlink($user['img']);
 
-    header('Location:index.php?send=delu#all-users');
-  } header('Location:index.php?delu=dont-exist#all-users');
-} header('Location:index.php?delu=form#all-users');
+    header('Location:index.php?delu=true#all-users');
+  }
+  header('Location:index.php?delu=dont-exist#all-users');
+}
+header('Location:index.php?delu=form#all-users');

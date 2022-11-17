@@ -1,30 +1,22 @@
 <!DOCTYPE html>
 <html lang="fr">
 <?php require_once('src/php/config.php');
-// $creaId = $_GET['id'];
 $recupCreaTitle = explode('/', $_SERVER['REQUEST_URI']);
-// print_r($recupCreaTitle);
 $creaTitle = $recupCreaTitle[2];
-// echo $creaTitle;
 $prepare = $db->prepare('SELECT * FROM creations WHERE title = ?');
 $prepare->execute(array($creaTitle));
 $creation = $prepare->fetch();
-// print_r($creations);
 $tabNumImg = explode(",", $creation['imgs']);
-// print_r($tabNumImg);
 $numImg = array_slice($tabNumImg, 0, 1);
 $imageSelect = $db->prepare('SELECT * FROM images WHERE id = ?');
 $imageSelect->execute($numImg);
 $image = $imageSelect->fetch();
-// print_r($image['link']);
 $tabNumUser = explode(",", $creation['users']);
-// print_r($tabNumUser);
 $tabTitle = explode('-', $creation['title']);
 ?>
 
 <head>
   <?php include("src/includes/head.html"); ?>
-  <!-- TITLE -->
   <title><?php echo $creation['title'] ?> • neon prod.uction</title>
 </head>
 
@@ -47,7 +39,6 @@ $tabTitle = explode('-', $creation['title']);
         $userSelect = $db->prepare('SELECT * FROM users WHERE id = ?');
         $userSelect->execute(array($numUser));
         $user = $userSelect->fetch();
-        // print_r($user);
         echo '<a href="' . $user['link'] . '" target="_blank"><img src="' . $user['img'] . '">' . $user['name'] . '</a>';
       } ?>
     </div>
@@ -58,7 +49,6 @@ $tabTitle = explode('-', $creation['title']);
       <?php foreach ($tabNumImg as $numImg) {
         $imageSelect->execute(array($numImg));
         $image = $imageSelect->fetch();
-        // print_r($image);
         echo '<div class="card"><img src="' . $image['link'] . '"></div>';
       } ?>
     </div>
@@ -69,8 +59,6 @@ $tabTitle = explode('-', $creation['title']);
     $tabCreaId = $prepare->fetchAll();
     $minId = array_shift($tabCreaId);
     $maxId = array_pop($tabCreaId);
-    // print_r($minId);
-    // print_r($maxId);
     $prepare = $db->prepare('SELECT * FROM creations WHERE id = ?');
     if ($creation['id'] > $minId[0]) {
       $prepare->execute(array($creation['id'] - 1));
@@ -79,7 +67,6 @@ $tabTitle = explode('-', $creation['title']);
       $numImg = array_slice($tabNumImg, 0, 1);
       $imageSelect->execute($numImg);
       $image = $imageSelect->fetch();
-      // print_r($creaPrev);
       echo '<a href="/creations/' . $creaPrev['title'] . '">
       <img src="/src/img/prev-next-arrow.svg">
       <div class="card"><img src="' . $image['link'] . '"></div>
@@ -96,7 +83,6 @@ $tabTitle = explode('-', $creation['title']);
       $numImg = array_slice($tabNumImg, 0, 1);
       $imageSelect->execute($numImg);
       $image = $imageSelect->fetch();
-      // print_r($creaNext);
       echo '<a href="/creations/' . $creaNext['title'] . '" id="prev-inverse">
       <img id="svg" src="/src/img/prev-next-arrow.svg">
       <div class="card"><img src="' . $image['link'] . '"></div>

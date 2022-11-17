@@ -57,10 +57,4 @@ if (isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email']
   $headers .= "Reply-To: " . $email . "\r\n";
 
   mail($to, $object, $content, $headers);
-  // echo $name;
-  // echo $firstname;
-  // echo $email;
-  // echo $subject;
-  // echo $motif;
-  // echo $message;
 } else header('Location:/?send=false#contact');

@@ -3,7 +3,6 @@
 
 <head>
   <?php include("../includes/head.html"); ?>
-  <!-- TITLE -->
   <title>cookies • neon prod.uction</title>
 </head>
 

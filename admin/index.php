@@ -3,7 +3,6 @@
 
 <head>
   <?php include_once('../src/includes/head.html'); ?>
-  <!-- TITLE -->
   <title>admin • neon prod.uction</title>
 </head>
 
@@ -12,6 +11,20 @@
   <div class="container">
     <section class="add" id="add-creations">
       <h3>Ajouter une création</h3>
+      <?php if (isset($_GET['addc'])) {
+        $err = htmlspecialchars($_GET['addc']);
+        switch ($err) {
+          case 'true':
+            echo "<p class='form-alert form-true'>La création a bien été ajoutée.</p>";
+            break;
+          case 'exist':
+            echo "<p class='form-alert form-false'>Une création avec ce titre existe déjà.</p>";
+            break;
+          case 'form':
+            echo "<p class='form-alert form-false'>Le formulaire n'est pas rempli correctement.</p>";
+            break;
+        }
+      } ?>
       <div class="section-line">
         <form action="add-creations.php" method="POST">
           <div>
@@ -49,6 +62,20 @@
     </section>
     <section class="add" id="add-images">
       <h3>Ajouter une image</h3>
+      <?php if (isset($_GET['addi'])) {
+        $err = htmlspecialchars($_GET['addi']);
+        switch ($err) {
+          case 'true':
+            echo "<p class='form-alert form-true'>L'image a bien été ajoutée.</p>";
+            break;
+          case 'exist':
+            echo "<p class='form-alert form-false'>Une image avec ce nom existe déjà.</p>";
+            break;
+          case 'form':
+            echo "<p class='form-alert form-false'>Le fichier n'a pas pu être envoyé.</p>";
+            break;
+        }
+      } ?>
       <div class="section-line">
         <form action="add-images.php" method="POST" enctype="multipart/form-data">
           <div>
@@ -64,6 +91,20 @@
     </section>
     <section id="add-users" class="add">
       <h3>Ajouter un·e collaborateur·trice</h3>
+      <?php if (isset($_GET['addu'])) {
+        $err = htmlspecialchars($_GET['addu']);
+        switch ($err) {
+          case 'true':
+            echo "<p class='form-alert form-true'>Le ou la collaborateur·rice a bien été ajouté·e.</p>";
+            break;
+          case 'exist':
+            echo "<p class='form-alert form-false'>Un·e collaborateur·rice avec ce nom existe déjà.</p>";
+            break;
+          case 'form':
+            echo "<p class='form-alert form-false'>Le formulaire n'est pas rempli correctement.</p>";
+            break;
+        }
+      } ?>
       <div class="section-line">
         <form action="add-users.php" method="post" enctype="multipart/form-data">
           <div>
@@ -89,21 +130,39 @@
     </section>
     <section id="all-creations" class="all">
       <h3>Toutes les créations</h3>
+      <?php if (isset($_GET['delc'])) {
+        $err = htmlspecialchars($_GET['delc']);
+        switch ($err) {
+          case 'true':
+            echo "<p class='form-alert form-true'>La création a bien été supprimée.</p>";
+            break;
+          case 'dont-exist':
+            echo "<p class='form-alert form-false'>Cette création n'existe plus.</p>";
+            break;
+          case 'form':
+            echo "<p class='form-alert form-false'>Une erreur est survenue.</p>";
+            break;
+        }
+      }
+      if (isset($_GET['update'])) {
+        $err = htmlspecialchars($_GET['update']);
+        switch ($err) {
+          case 'true':
+            echo "<p class='form-alert form-true'>La création a bien été mise à jour.</p>";
+            break;
+        }
+      } ?>
       <div class="galery">
         <?php require_once('../src/php/config.php');
         $prepare = $db->prepare('SELECT * FROM creations');
         $prepare->execute();
         $creations = $prepare->fetchAll();
-        // print_r($creations);
         foreach ($creations as $creation) {
-          // print_r($creation);
           $tabNumImg = explode(",", $creation['imgs']);
-          // print_r($tabNumImg);
           $numImg = array_slice($tabNumImg, 0, 1);
           $imageSelected = $db->prepare('SELECT * FROM images WHERE id = ?');
           $imageSelected->execute($numImg);
           $image = $imageSelected->fetch();
-          // print_r($image['link']);
           echo '<div class="card"><img src="' . $image['link'] . '"><div><p>' . $creation['title'] . '</p><p>ID = ' . $creation['id'] . '</p><a href="/creations/' . $creation['title'] . '" target="_blank" class="see">Voir</a><a href="update.php?id=' . $creation['id'] . '" class="modify" target="_blank">Modifier</a><form method="post" action="del-creations.php"><input type="hidden" name="crea-id" value="' . $creation['id'] . '"><input type="submit" name="submit-del-creations" class="del-btn" value="Supprimer"></form></div></div>';
         }
         ?>
@@ -111,14 +170,26 @@
     </section>
     <section id="all-images" class="all">
       <h3>Toutes les images</h3>
+      <?php if (isset($_GET['deli'])) {
+        $err = htmlspecialchars($_GET['deli']);
+        switch ($err) {
+          case 'true':
+            echo "<p class='form-alert form-true'>L'image a bien été supprimée'.</p>";
+            break;
+          case 'dont-exist':
+            echo "<p class='form-alert form-false'>Cette image n'existe plus.</p>";
+            break;
+          case 'form':
+            echo "<p class='form-alert form-false'>Une erreur est survenue.</p>";
+            break;
+        }
+      } ?>
       <div class="galery">
         <?php require_once('../src/php/config.php');
         $prepare = $db->prepare('SELECT * FROM images');
         $prepare->execute();
         $images = $prepare->fetchAll();
-        // print_r($creations);
         foreach ($images as $image) {
-          // print_r($image['link']);
           echo '<div class="card"><img src="' . $image['link'] . '"><div><p>ID = ' . $image['id'] . '</p><form method="post" action="del-images.php"><input type="hidden" name="img-id" value="' . $image['id'] . '"><input type="submit" class="del-btn" name="submit-del-images" value="Supprimer"></form></div></div>';
         }
         ?>
@@ -126,19 +197,31 @@
     </section>
     <section id="all-users" class="all">
       <h3>Toutes les collaborateurs·rices</h3>
+      <?php if (isset($_GET['delu'])) {
+        $err = htmlspecialchars($_GET['delu']);
+        switch ($err) {
+          case 'true':
+            echo "<p class='form-alert form-true'>Le ou la collaborateur·rice a bien été supprimé·e'.</p>";
+            break;
+          case 'dont-exist':
+            echo "<p class='form-alert form-false'>Ce·tte collaborateur·rice n'existe plus.</p>";
+            break;
+          case 'form':
+            echo "<p class='form-alert form-false'>Une erreur est survenue.</p>";
+            break;
+        }
+      } ?>
       <ul>
         <?php require_once('../src/php/config.php');
         $prepare = $db->prepare('SELECT * FROM users');
         $prepare->execute();
         $users = $prepare->fetchAll();
-        // print_r($creations);
         foreach ($users as $user) {
-          // print_r($image['link']);
           echo '<li><img src="' . $user['img'] . '"><p>' . $user['name'] . '</p><p>ID = ' . $user['id'] . '</p><form method="post" action="del-users.php"><input type="hidden" name="user-id" value="' . $user['id'] . '"><input type="submit" class="del-btn" name="submit-del-users" value="Supprimer"></form></li>';
         }
         ?>
-  </div>
-  </section>
+      </ul>
+    </section>
   </div>
   <?php include_once('../src/includes/footer.html'); ?>
 </body>

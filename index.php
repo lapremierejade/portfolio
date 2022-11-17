@@ -2,8 +2,7 @@
 <html lang="fr">
 
 <head>
-<?php include("src/includes/head.html"); ?>
-  <!-- TITLE -->
+  <?php include("src/includes/head.html"); ?>
   <title>accueil • neon prod.uction</title>
 </head>
 

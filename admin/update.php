@@ -3,12 +3,11 @@
 
 <head>
   <?php include_once('../src/includes/head.html'); ?>
-  <!-- TITLE -->
   <title>admin • neon prod.uction</title>
 </head>
 
 <body>
-  <?php include_once('../src/includes/header.html'); 
+  <?php include_once('../src/includes/header.html');
   require_once '../src/php/config.php';
   $prepare = $db->prepare('SELECT * FROM creations WHERE id = ?');
   $prepare->execute(array($_GET['id']));
@@ -17,6 +16,14 @@
   <div class="container">
     <section class="add" id="update-creations">
       <h3>Mettre à jour <?php echo $creation['title']; ?></h3>
+      <?php if (isset($_GET['update'])) {
+        $err = htmlspecialchars($_GET['update']);
+        switch ($err) {
+          case 'form':
+            echo "<p class='form-alert form-false'>Le formulaire n'est pas rempli correctement.</p>";
+            break;
+        }
+      } ?>
       <div class="section-line">
         <form action="update-creations.php" method="POST">
           <div>
