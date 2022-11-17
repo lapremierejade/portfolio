@@ -41,20 +41,20 @@
     <h3>À propos de moi</h3>
     <div class="about-tab">
       <div class="about-case about-case-1">
-        <h4>Lorem</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque turpis vitae ipsum rutrum, eu vestibulum sapien posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur ornare turpis vel massa fringilla dapibus. Nulla facilisi. Donec ut massa sollicitudin, convallis odio a, commodo magna. Maecenas tempor molestie suscipit. Sed vehicula elit at lacus imperdiet faucibus.</p>
+        <h4>Présentation</h4>
+        <p>Je m'appelle Jade, j’ai actuellement 20 ans. J’habite dans la région Occitanie mais j’ai la possibilité de me déplacer en Nouvelle-Aquitaine mais aussi en région PACA. Je suis titulaire du permis B et véhiculée. Je suis en deuxième année de Bachelor dans les Métiers du Multimédia et de l’Internet en alternance. Cette dernière se déroule dans une concession automobile. Je réalise leur communication sur les réseaux sociaux pour une durée de 2 ans.</p>
       </div>
       <div class="about-case about-case-2">
-        <h4>Lorem</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque turpis vitae ipsum rutrum, eu vestibulum sapien posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur ornare turpis vel massa fringilla dapibus. Nulla facilisi. Donec ut massa sollicitudin, convallis odio a, commodo magna. Maecenas tempor molestie suscipit. Sed vehicula elit at lacus imperdiet faucibus.</p>
+        <h4>Mes passions</h4>
+        <p>Je m’intéresse à beaucoup de choses, depuis que je suis petite, j’aime beaucoup le monde du spectacle vivant, j’ai pratiqué le théâtre pendant 8 ans dans une troupe de campagne. J’adore regarder et analyser des films, je le fais de plus en plus car dans mes études nous avons des cours d’analyses cinématographiques. Depuis peu de temps, je m’intéresse au monde de l’automobile. Etant une personne très manuelle, j’aime me pencher sur les différents soucis que l’on peut avoir sur son véhicule et apprendre à les résoudre. Chaque jour, de nouvelles choses attisent ma curiosité et mon envie d’apprendre. J’aime beaucoup découvrir de nouvelles choses et essayer de comprendre leur fonctionnement.</p>
       </div>
       <div class="about-case about-case-3">
-        <h4>Lorem</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque turpis vitae ipsum rutrum, eu vestibulum sapien posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur ornare turpis vel massa fringilla dapibus. Nulla facilisi. Donec ut massa sollicitudin, convallis odio a, commodo magna. Maecenas tempor molestie suscipit. Sed vehicula elit at lacus imperdiet faucibus.</p>
+        <h4>Service civique en communication à l’Université de Bordeaux</h4>
+        <p>Pendant 9 mois durant l’année scolaire 2020/2021, j’ai réalisé un service civique en médiation associative et animation de campus à la faculté de Biologie de Talence. Cette expérience fut très enrichissante par rapport à la gestion de projet, la création de visuels et la gestion des réseaux sociaux. Pendant ces 9 mois, j’ai notamment réalisé et animé des soirées diffusion de courts-métrages en distanciel, j’ai aidé à l’animation et la création d’un jeu de piste dans Bordeaux.</p>
       </div>
       <div class="about-case about-case-4">
-        <h4>Lorem</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque turpis vitae ipsum rutrum, eu vestibulum sapien posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur ornare turpis vel massa fringilla dapibus. Nulla facilisi. Donec ut massa sollicitudin, convallis odio a, commodo magna. Maecenas tempor molestie suscipit. Sed vehicula elit at lacus imperdiet faucibus.</p>
+        <h4>Engagements associatifs et bénévoles</h4>
+        <p>Pendant un an, j’ai été membre de l’association de mon lycée qui avait pour but de créer des projets pour occuper les élèves, notamment internes, lors de soirées d’animation. Lors de mes études supérieures, j’ai été présidente du Bureau des Etudiants de ma formation. Cette expérience m’a appris à mieux gérer des projets, trouver des plans B en cas d’annulation, gérer des groupes de personnes plus ou moins grands (de 50 à 150 personnes). J’avais beaucoup de responsabilités, grâce à ça, j’ai appris à déléguer des tâches et à faire confiance à mon équipe. Pendant l’année 2022, j’ai participé à un tournage pour YouTube sur la chaîne de Squeezie où le concept était un 'Où est Charlie" géant. Nous étions 1500 figurants. Cette expérience fut très enrichissante et m’a permis de découvrir que je souhaite travailler sur ce genre de tournages plus tard, les organiser, les encadrer et toutes les contraintes qui vont avec m’intéresse vraiment.</p>
       </div>
       <div class="about-case about-case-5">
         <h4>Lorem</h4>
@@ -62,50 +62,50 @@
           <div class="about-skill">
             <div class="img about-img-1"></div>
             <div class="text">
-              <h5>Lorem ipsum</h5>
+              <h5>Photoshop</h5>
               <p>Lorem ispum dolor</p>
             </div>
           </div>
           <div class="about-skill">
             <div class="img about-img-2"></div>
             <div class="text">
-              <h5>Lorem ipsum</h5>
+              <h5>Illustrator</h5>
               <p>Lorem ispum dolor</p>
             </div>
           </div>
           <div class="about-skill">
             <div class="img about-img-3"></div>
             <div class="text">
-              <h5>Lorem ipsum</h5>
+              <h5>Premiere Pro</h5>
               <p>Lorem ispum dolor</p>
             </div>
           </div>
           <div class="about-skill">
             <div class="img about-img-4"></div>
             <div class="text">
-              <h5>Lorem ipsum</h5>
+              <h5>InDesign</h5>
               <p>Lorem ispum dolor</p>
             </div>
           </div>
           <div class="about-skill">
             <div class="img about-img-5"></div>
             <div class="text">
-              <h5>Lorem ipsum</h5>
+              <h5>Microsoft Office</h5>
               <p>Lorem ispum dolor</p>
             </div>
           </div>
           <div class="about-skill">
             <div class="img about-img-6"></div>
             <div class="text">
-              <h5>Lorem ipsum</h5>
+              <h5>Appareil photo et caméra</h5>
               <p>Lorem ispum dolor</p>
             </div>
           </div>
         </div>
       </div>
       <div class="about-case about-case-6">
-        <h4>Lorem</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque turpis vitae ipsum rutrum, eu vestibulum sapien posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur ornare turpis vel massa fringilla dapibus. Nulla facilisi. Donec ut massa sollicitudin, convallis odio a, commodo magna. Maecenas tempor molestie suscipit. Sed vehicula elit at lacus imperdiet faucibus.</p>
+        <h4>Mes compétences</h4>
+        <p>Encore dans les études, je suis en train de faire grandir mes compétences sur la suite Adobe, notamment Photoshop, Illustrator, Premiere pro et InDesign. Je suis junior dans ces milieux mais petit à petit j'approfondis mes connaissances et mes travaux deviennent de plus en plus complets et travaillés. J’ai aussi de bonnes connaissances sur la suite Microsoft Office. Je suis à l’aise devant une caméra comme derrière celle-ci. Pendant mes études, nous touchons beaucoup au monde de l’audiovisuel, j’aime beaucoup cet aspect de ma formation, il nous permet de développer et laisser parler notre créativité.</p>
       </div>
     </div>
   </section>
@@ -201,7 +201,7 @@
             </a>
           </ul>
         </div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque turpis vitae ipsum rutrum, eu vestibulum sapien posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur ornare turpis vel massa fringilla dapibus. Nulla facilisi. Donec ut massa sollicitudin, convallis odio a, commodo magna. Maecenas tempor molestie suscipit. Sed vehicula elit at lacus imperdiet faucibus.</p>
+        <p>N'hésitez pas à me contacter, je me ferais un plaisir de répondre à vos questions. Que ça soit pour une simple question, pour avoir des informations supplémentaires sur moi ou mes compétences ou pour me proposer un projet intéressant. Si vous voulez en voir plus je suis aussi disponible sur YouTube et Instagram. Vous pouvez même prendre un rendez-vous avec moi sur Tarbes, Bordeaux ou Toulouse.</p>
       </div>
     </div>
     <img src="/src/img/wave.svg" id="svg-inverse">
