@@ -13,5 +13,5 @@ if (isset($_POST['title']) && isset($_POST['type']) && isset($_POST['tool']) && 
 
   $prepare = $db->prepare('UPDATE creations SET title = ?, type = ?, tool = ?, text = ?, users = ?, imgs = ?');
   $prepare->execute(array($title, $type, $tool, $text, $users, $imgs));
-  header('Location:index.php?update=true');
+  header('Location:index.php?update=true#all-creations');
 } else header('Location:update.php?update=form');

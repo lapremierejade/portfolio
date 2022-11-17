@@ -9,7 +9,7 @@ if (isset($_POST['submit-users']) && isset($_POST['link']) && !empty($_POST['lin
   $link = htmlspecialchars($_POST['link']);
   $pseudo = htmlspecialchars($_POST['pseudo']);
 
-  $name = $_FILES['file-user']['name'];
+  $name = $_FILES['file-user']['full_path'];
   $tmp_name = $_FILES['file-user']['tmp_name'];
 
   $upload_path = $upload_dir . basename($name);
