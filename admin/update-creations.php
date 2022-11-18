@@ -10,8 +10,9 @@ if (isset($_POST['title']) && isset($_POST['type']) && isset($_POST['tool']) && 
   $text = htmlspecialchars($_POST['text']);
   $users = htmlspecialchars($_POST['users']);
   $imgs = htmlspecialchars($_POST['imgs']);
+  $videos = htmlspecialchars($_POST['videos']);
 
-  $prepare = $db->prepare('UPDATE creations SET title = ?, type = ?, tool = ?, text = ?, users = ?, imgs = ?');
-  $prepare->execute(array($title, $type, $tool, $text, $users, $imgs));
+  $prepare = $db->prepare('UPDATE creations SET title = ?, type = ?, tool = ?, text = ?, users = ?, imgs = ?, videos = ?');
+  $prepare->execute(array($title, $type, $tool, $text, $users, $imgs, $videos));
   header('Location:index.php?update=true#all-creations');
 } else header('Location:update.php?update=form');

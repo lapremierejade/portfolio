@@ -12,6 +12,7 @@ $imageSelect = $db->prepare('SELECT * FROM images WHERE id = ?');
 $imageSelect->execute($numImg);
 $image = $imageSelect->fetch();
 $tabNumUser = explode(",", $creation['users']);
+$tabNumVideos = explode(",", $creation['videos']);
 $tabTitle = explode('-', $creation['title']);
 ?>
 
@@ -46,7 +47,17 @@ $tabTitle = explode('-', $creation['title']);
   <section id="galery">
     <h3>Galerie</h3>
     <div class="galery">
-      <?php foreach ($tabNumImg as $numImg) {
+      <?php foreach ($tabNumVideos as $numVideo) {
+        if ($numVideo = 0) {
+          $videoSelect = $db->prepare('SELECT * FROM videos WHERE id = ?');
+          $videoSelect->execute(array($numVideo));
+          $video = $videoSelect->fetch();
+          echo '<div class="card"><video src="' . $video['link'] . '" autoplay loop muted></video></div>';
+        } else {
+          echo '';
+        }
+      }
+      foreach ($tabNumImg as $numImg) {
         $imageSelect->execute(array($numImg));
         $image = $imageSelect->fetch();
         echo '<div class="card"><img src="' . $image['link'] . '"></div>';

@@ -54,10 +54,14 @@
               <label for="imgs">Image·s</label>
               <input type="text" name="imgs" id="imgs" placeholder="1,2,3" required>
             </span>
+            <span>
+              <label for="videos">Video·s</label>
+              <input type="text" name="videos" id="videos" placeholder="1,2,3" required>
+            </span>
           </div>
           <input type="submit" value="Ajouter">
         </form>
-        <p>NE PAS OUBLIER DE RESPECTER LE FORMAT PRÉCISÉ DANS CHAQUE CHAMPS !<br>Le titre du projet doit être écrit en minuscule avec un tiret (-) entre chaque mot. Le type doit être écrit en minuscule avec des espaces si nécessaire. Les outils doivent être écrit en minuscule avec des virgules (, ) entre chaque mot et une esperluette (&) avant le dernier mot. Le texte peut être écrit de n'importe quelle façon. Les collaborat·eur·rice·s doivent être écrit avec des chiffres, leur "id", séparé par des virgules (,). L'id 1 correspond à "Neon Prod.uction". Les images doivent être écrites avec des chiffres, leur "id", séparé par des virgules (,).</p>
+        <p>NE PAS OUBLIER DE RESPECTER LE FORMAT PRÉCISÉ DANS CHAQUE CHAMPS !<br>Le titre du projet doit être écrit en minuscule avec un tiret (-) entre chaque mot. Le type doit être écrit en minuscule avec des espaces si nécessaire. Les outils doivent être écrit en minuscule avec des virgules (, ) entre chaque mot et une esperluette (&) avant le dernier mot. Le texte peut être écrit de n'importe quelle façon. Les collaborat·eur·rice·s doivent être écrit avec des chiffres, leur "id", séparé par des virgules (,). L'id 1 correspond à "Neon Prod.uction". Les images et les vidéos doivent être écrites avec des chiffres, leur "id", séparé par des virgules (,). S'il n'y a aucune vidéo, il suffit de mettre '0'.</p>
       </div>
     </section>
     <section class="add" id="add-images">
@@ -87,6 +91,35 @@
           <input type="submit" name="submit-images" value="Ajouter">
         </form>
         <p>Il est préférable de nommer les fichiers sans espace. On peut ajouter une seule image à la fois. L'image sera envoyée sur le serveur dans 'src/uploads/'.</p>
+      </div>
+    </section>
+    <section class="add" id="add-videos">
+      <h3>Ajouter une vidéo</h3>
+      <?php if (isset($_GET['addv'])) {
+        $err = htmlspecialchars($_GET['addv']);
+        switch ($err) {
+          case 'true':
+            echo "<p class='form-alert form-true'>La vidéo a bien été ajoutée.</p>";
+            break;
+          case 'exist':
+            echo "<p class='form-alert form-false'>Une vidéo avec ce nom existe déjà.</p>";
+            break;
+          case 'form':
+            echo "<p class='form-alert form-false'>Le fichier n'a pas pu être envoyé.</p>";
+            break;
+        }
+      } ?>
+      <div class="section-line">
+        <form action="add-videos.php" method="POST" enctype="multipart/form-data">
+          <div>
+            <span>
+              <label for="file-video">Choisir une vidéo</label>
+              <input type="file" name="file-video" id="file-video" accept="video/*" required>
+            </span>
+          </div>
+          <input type="submit" name="submit-videos" value="Ajouter">
+        </form>
+        <p>Il est préférable de nommer les fichiers sans espace. On peut ajouter une seule vidéo à la fois. La vidéo sera envoyée sur le serveur dans 'src/uploads/'.</p>
       </div>
     </section>
     <section id="add-users" class="add">
@@ -195,13 +228,40 @@
         ?>
       </div>
     </section>
+    <section id="all-videos" class="all">
+      <h3>Toutes les vidéos</h3>
+      <?php if (isset($_GET['delv'])) {
+        $err = htmlspecialchars($_GET['delv']);
+        switch ($err) {
+          case 'true':
+            echo "<p class='form-alert form-true'>La vidéo a bien été supprimée'.</p>";
+            break;
+          case 'dont-exist':
+            echo "<p class='form-alert form-false'>Cette vidéo n'existe plus.</p>";
+            break;
+          case 'form':
+            echo "<p class='form-alert form-false'>Une erreur est survenue.</p>";
+            break;
+        }
+      } ?>
+      <div class="galery">
+        <?php require_once('../src/php/config.php');
+        $prepare = $db->prepare('SELECT * FROM videos');
+        $prepare->execute();
+        $videos = $prepare->fetchAll();
+        foreach ($videos as $video) {
+          echo '<div class="card"><video src="'.$video['link'].'" autoplay loop muted></video><div><p>ID = ' . $video['id'] . '</p><form method="post" action="del-videos.php"><input type="hidden" name="video-id" value="' . $video['id'] . '"><input type="submit" class="del-btn" name="submit-del-videos" value="Supprimer"></form></div></div>';
+        }
+        ?>
+      </div>
+    </section>
     <section id="all-users" class="all">
       <h3>Toutes les collaborateurs·rices</h3>
       <?php if (isset($_GET['delu'])) {
         $err = htmlspecialchars($_GET['delu']);
         switch ($err) {
           case 'true':
-            echo "<p class='form-alert form-true'>Le ou la collaborateur·rice a bien été supprimé·e'.</p>";
+            echo "<p class='form-alert form-true'>Le ou la collaborateur·rice a bien été supprimé·e.</p>";
             break;
           case 'dont-exist':
             echo "<p class='form-alert form-false'>Ce·tte collaborateur·rice n'existe plus.</p>";

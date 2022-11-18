@@ -51,6 +51,10 @@
       <h2>Le planning</h2>
       <a href="https://victor-moncassin.notion.site/Planning-ab5788b490ca464b91b971bfc557c1c0" target="_blank">Lien vers le planning Notion</a>
     </div>
+    <div>
+      <h2>La maquette</h2>
+      <a href="https://xd.adobe.com/view/bdce5c54-32c3-499b-b9e1-ce96b2c6bf22-e89d/">Lien vers la maquette</a>
+    </div>
   </div>
   <?php include_once('../includes/footer.html') ?>
 </body>

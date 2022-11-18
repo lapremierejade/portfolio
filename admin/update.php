@@ -3,7 +3,7 @@
 
 <head>
   <?php include_once('../src/includes/head.html'); ?>
-  <title>admin • neon prod.uction</title>
+  <title>update • neon prod.uction</title>
 </head>
 
 <body>
@@ -53,10 +53,14 @@
               <label for="imgs">Image·s</label>
               <input type="text" name="imgs" id="imgs" placeholder="1,2,3" required value='<?php echo $creation['imgs']; ?>'>
             </span>
+            <span>
+              <label for="videos">Vidéo·s</label>
+              <input type="text" name="videos" id="videos" placeholder="1,2,3" required value='<?php echo $creation['videos']; ?>'>
+            </span>
           </div>
           <input type="submit" value="Mettre à jour">
         </form>
-        <p>NE PAS OUBLIER DE RESPECTER LE FORMAT PRÉCISÉ DANS CHAQUE CHAMPS !<br>Le titre du projet doit être écrit en minuscule avec un tiret (-) entre chaque mot. Le type doit être écrit en minuscule avec des espaces si nécessaire. Les outils doivent être écrit en minuscule avec des virgules (, ) entre chaque mot et une esperluette (&) avant le dernier mot. Le texte peut être écrit de n'importe quelle façon. Les collaborat·eur·rice·s doivent être écrit avec des chiffres, leur "id", séparé par des virgules (,). L'id 1 correspond à "Neon Prod.uction". Les images doivent être écrites avec des chiffres, leur "id", séparé par des virgules (,).</p>
+        <p>NE PAS OUBLIER DE RESPECTER LE FORMAT PRÉCISÉ DANS CHAQUE CHAMPS !<br>Le titre du projet doit être écrit en minuscule avec un tiret (-) entre chaque mot. Le type doit être écrit en minuscule avec des espaces si nécessaire. Les outils doivent être écrit en minuscule avec des virgules (, ) entre chaque mot et une esperluette (&) avant le dernier mot. Le texte peut être écrit de n'importe quelle façon. Les collaborat·eur·rice·s doivent être écrit avec des chiffres, leur "id", séparé par des virgules (,). L'id 1 correspond à "Neon Prod.uction". Les images et les vidéos doivent être écrites avec des chiffres, leur "id", séparé par des virgules (,). S'il n'y a aucune vidéo, il suffit de mettre '0'.</p>
       </div>
     </section>
   </div>
