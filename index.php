@@ -57,48 +57,60 @@
         <p>Pendant un an, j’ai été membre de l’association de mon lycée qui avait pour but de créer des projets pour occuper les élèves, notamment internes, lors de soirées d’animation. Lors de mes études supérieures, j’ai été présidente du Bureau des Etudiants de ma formation. Cette expérience m’a appris à mieux gérer des projets, trouver des plans B en cas d’annulation, gérer des groupes de personnes plus ou moins grands (de 50 à 150 personnes). J’avais beaucoup de responsabilités, grâce à ça, j’ai appris à déléguer des tâches et à faire confiance à mon équipe. Pendant l’année 2022, j’ai participé à un tournage pour YouTube sur la chaîne de Squeezie où le concept était un 'Où est Charlie" géant. Nous étions 1500 figurants. Cette expérience fut très enrichissante et m’a permis de découvrir que je souhaite travailler sur ce genre de tournages plus tard, les organiser, les encadrer et toutes les contraintes qui vont avec m’intéresse vraiment.</p>
       </div>
       <div class="about-case about-case-5">
-        <h4>Lorem</h4>
+        <h4>Mes outils</h4>
         <div class="about-skills">
           <div class="about-skill">
-            <div class="img about-img-1"></div>
+            <div class="img">
+              <img src="/src/img/photoshop.png">
+            </div>
             <div class="text">
               <h5>Photoshop</h5>
-              <p>Lorem ispum dolor</p>
+              <p>⭐⭐⭐⭐⭐</p>
             </div>
           </div>
           <div class="about-skill">
-            <div class="img about-img-2"></div>
+            <div class="img">
+            <img src="/src/img/illustrator.png">
+            </div>
             <div class="text">
               <h5>Illustrator</h5>
-              <p>Lorem ispum dolor</p>
+              <p>⭐⭐⭐⭐⭐</p>
             </div>
           </div>
           <div class="about-skill">
-            <div class="img about-img-3"></div>
+            <div class="img">
+            <img src="/src/img/premiere.png">
+            </div>
             <div class="text">
               <h5>Premiere Pro</h5>
-              <p>Lorem ispum dolor</p>
+              <p>⭐⭐⭐⭐⭐</p>
             </div>
           </div>
           <div class="about-skill">
-            <div class="img about-img-4"></div>
+            <div class="img">
+            <img src="/src/img/indesign.png">
+            </div>
             <div class="text">
               <h5>InDesign</h5>
-              <p>Lorem ispum dolor</p>
+              <p>⭐⭐⭐⭐⭐</p>
             </div>
           </div>
           <div class="about-skill">
-            <div class="img about-img-5"></div>
+            <div class="img">
+            <img src="/src/img/office.jpg">
+            </div>
             <div class="text">
               <h5>Microsoft Office</h5>
-              <p>Lorem ispum dolor</p>
+              <p>⭐⭐⭐⭐⭐</p>
             </div>
           </div>
           <div class="about-skill">
-            <div class="img about-img-6"></div>
+            <div class="img">
+            <img src="/src/img/camera.png">
+            </div>
             <div class="text">
               <h5>Appareil photo et caméra</h5>
-              <p>Lorem ispum dolor</p>
+              <p>⭐⭐⭐⭐⭐</p>
             </div>
           </div>
         </div>

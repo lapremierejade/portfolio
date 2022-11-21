@@ -199,7 +199,7 @@ header img {
   align-items: center;
   gap: 10px;
 }
-.about-skill .img {
+.about-skill img {
   width: 50px;
   min-width: 50px;
   aspect-ratio: 1;
@@ -208,24 +208,6 @@ header img {
 .about-skill p {
   text-align: start;
   line-height: 13px;
-}
-.about-img-1 {
-  background: var(--yellow);
-}
-.about-img-2 {
-  background: var(--pink);
-}
-.about-img-3 {
-  background: var(--purple);
-}
-.about-img-4 {
-  background: var(--dark-blue);
-}
-.about-img-5 {
-  background: var(--dark-blue);
-}
-.about-img-6 {
-  background: var(--yellow);
 }
 /* contact */
 #contact {
