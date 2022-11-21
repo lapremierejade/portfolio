@@ -594,7 +594,7 @@ footer div:nth-child(2) p:nth-child(2) {
   gap: 10px;
 }
 .all .card:hover img, .all .card:hover video{
-  opacity: 0;
+  opacity: 0.4;
   width: 100%;
   transition: all 0.3s ease;
 }
