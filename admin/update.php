@@ -26,6 +26,7 @@
       } ?>
       <div class="section-line">
         <form action="update-creations.php" method="POST">
+          <input type="hidden" name="id" value="<?php echo $_GET['id']; ?>">
           <div>
             <span>
               <label for="title">Titre du projet</label>

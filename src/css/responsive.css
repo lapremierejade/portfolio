@@ -6,9 +6,14 @@
 }
 
 @media screen and (max-width: 1400px) {
-  section:not(#hero):not(#contact),
-  header {
-    padding: 25px;
+  header{
+    padding: 10px 25px;
+  }
+  section:not(#hero):not(#contact) {
+    padding: 100px 25px 0 25px;
+  }
+  #contact{
+    margin-top: 350px;
   }
   #contact form .form-line {
     flex-direction: column;
@@ -30,10 +35,7 @@
   }
   #go-home {
     margin: 10px 25px;
-  }
-  .mainNavFixed {
-    padding: 10px 25px;
-  }
+  } 
 }
 
 @media screen and (max-width: 1200px) {
@@ -74,7 +76,6 @@
   }
   .burgerFixed {
     position: fixed;
-    top: 70px;
     right: 25px;
   }
   #burger span {
@@ -128,13 +129,13 @@
   #burger-span-3.span3Active {
     background-color: var(--white);
   }
-  #creations .galery {
+  #creations .galery, .all .galery {
     grid-template-columns: repeat(2, 1fr);
   }
   .card {
     filter: grayscale(0);
   }
-  .card:hover img {
+  .card:hover img, .card:hover video {
     width: 100%;
   }
   .about-tab {
@@ -180,6 +181,36 @@
   footer div:nth-child(2) p {
     text-align: center;
   }
+  .add .section-line{
+    flex-flow: column;
+    gap: 30px;
+  }
+  .add form{
+    width: 100%;
+  }
+  .add p{
+    width: 100%;
+    padding: 0;
+  }
+  .all .card{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    aspect-ratio: auto;
+    gap: 15px;
+  }
+  .all .card img{
+    aspect-ratio: 16 / 9;
+  }
+  .all .card div{
+    flex-flow: row wrap;
+    z-index: 2;
+    display: flex;
+    position: static;
+  }
+  .all .card:hover img, .all .card:hover video{
+    opacity: 1;
+  }
 }
 
 @media screen and (max-width: 890px) {
@@ -189,6 +220,12 @@
   }
   #galery .galery {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .all .galery{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .add form div{
+    flex-flow: column;
   }
 }
 
@@ -233,10 +270,10 @@
 
 @media screen and (max-width: 400px) {
   #hero-title h1 {
-    font-size: 2.3em;
+    font-size: 1.8em;
   }
   #hero-title h2 {
-    font-size: 1.3em;
+    font-size: 1.1em;
   }
   #prev-next .card {
     display: none;
@@ -244,13 +281,11 @@
   #prev-next a {
     justify-content: initial;
   }
-}
-
-@media screen and (max-width: 400px) {
-  #hero-title h1 {
-    font-size: 1.8em;
+  .all .card div{
+    gap: 5px;
   }
-  #hero-title h2 {
-    font-size: 1.1em;
+  .all .card p{
+    width: 48%;
+    text-align: center;
   }
 }

@@ -196,7 +196,20 @@
           $imageSelected = $db->prepare('SELECT * FROM images WHERE id = ?');
           $imageSelected->execute($numImg);
           $image = $imageSelected->fetch();
-          echo '<div class="card"><img src="' . $image['link'] . '"><div><p>' . $creation['title'] . '</p><p>ID = ' . $creation['id'] . '</p><a href="/creations/' . $creation['title'] . '" target="_blank" class="see">Voir</a><a href="update.php?id=' . $creation['id'] . '" class="modify" target="_blank">Modifier</a><form method="post" action="del-creations.php"><input type="hidden" name="crea-id" value="' . $creation['id'] . '"><input type="submit" name="submit-del-creations" class="del-btn" value="Supprimer"></form></div></div>';
+          echo '
+          <div class="card">
+          <img src="' . $image['link'] . '">
+          <div>
+          <p>' . $creation['title'] . '</p>
+          <p>ID = ' . $creation['id'] . '</p>
+          <a href="/creations/' . $creation['title'] . '" target="_blank" class="see">Voir</a>
+          <a href="update.php?id=' . $creation['id'] . '" class="modify" target="_blank">Modifier</a>
+          <form method="post" action="del-creations.php">
+          <input type="hidden" name="crea-id" value="' . $creation['id'] . '">
+          <input type="submit" name="submit-del-creations" class="del-btn" value="Supprimer">
+          </form>
+          </div>
+          </div>';
         }
         ?>
       </div>
@@ -250,7 +263,7 @@
         $prepare->execute();
         $videos = $prepare->fetchAll();
         foreach ($videos as $video) {
-          echo '<div class="card"><video src="'.$video['link'].'" autoplay loop muted></video><div><p>ID = ' . $video['id'] . '</p><form method="post" action="del-videos.php"><input type="hidden" name="video-id" value="' . $video['id'] . '"><input type="submit" class="del-btn" name="submit-del-videos" value="Supprimer"></form></div></div>';
+          echo '<div class="card"><video src="' . $video['link'] . '" autoplay loop muted></video><div><p>ID = ' . $video['id'] . '</p><form method="post" action="del-videos.php"><input type="hidden" name="video-id" value="' . $video['id'] . '"><input type="submit" class="del-btn" name="submit-del-videos" value="Supprimer"></form></div></div>';
         }
         ?>
       </div>
@@ -284,6 +297,7 @@
     </section>
   </div>
   <?php include_once('../src/includes/footer.html'); ?>
+  <script src="/src/js/burger-menu.js"></script>
 </body>
 
 </html>

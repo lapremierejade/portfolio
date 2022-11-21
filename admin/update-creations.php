@@ -11,8 +11,9 @@ if (isset($_POST['title']) && isset($_POST['type']) && isset($_POST['tool']) && 
   $users = htmlspecialchars($_POST['users']);
   $imgs = htmlspecialchars($_POST['imgs']);
   $videos = htmlspecialchars($_POST['videos']);
+  $id = htmlspecialchars($_POST['id']);
 
-  $prepare = $db->prepare('UPDATE creations SET title = ?, type = ?, tool = ?, text = ?, users = ?, imgs = ?, videos = ?');
-  $prepare->execute(array($title, $type, $tool, $text, $users, $imgs, $videos));
+  $prepare = $db->prepare('UPDATE creations SET title = ?, type = ?, tool = ?, text = ?, users = ?, imgs = ?, videos = ? WHERE id = ?');
+  $prepare->execute(array($title, $type, $tool, $text, $users, $imgs, $videos, $id));
   header('Location:index.php?update=true#all-creations');
 } else header('Location:update.php?update=form');

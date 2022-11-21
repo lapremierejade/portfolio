@@ -128,25 +128,25 @@
         <form action="/src/php/form.php" method="post">
           <div class="form-line form-names">
             <div>
-              <label for="name">Nom</label>
-              <input type="text" name="name" id="name" required>
+              <label for="name">Nom*</label>
+              <input type="text" name="name" id="name" required placeholder="e.g. smith">
             </div>
             <div>
-              <label for="firstname">Prénom</label>
-              <input type="text" name="firstname" id="firstname" required>
+              <label for="firstname">Prénom*</label>
+              <input type="text" name="firstname" id="firstname" required placeholder="e.g. john">
             </div>
           </div>
           <div>
-            <label for="email">Adresse email</label>
-            <input type="email" name="email" id="email" required>
+            <label for="email">Adresse email*</label>
+            <input type="email" name="email" id="email" required placeholder="e.g. johnsmith@example.com">
           </div>
           <div class="form-line form-subject">
             <div>
-              <label for="subject">Objet du message</label>
-              <input type="text" name="subject" id="subject" required>
+              <label for="subject">Objet du message*</label>
+              <input type="text" name="subject" id="subject" required placeholder="e.g. projet de film">
             </div>
             <div>
-              <label for="motif">Motif</label>
+              <label for="motif">Motif*</label>
               <select name="motif" id="motif" required>
                 <option value="">Choisissez un motif</option>
                 <option value="infos">Informations</option>
@@ -156,8 +156,8 @@
             </div>
           </div>
           <div>
-            <label for="message">Message</label>
-            <textarea name="message" id="message" required></textarea>
+            <label for="message">Message*</label>
+            <textarea name="message" id="message" required placeholder="e.g. je vous contacte pour ..."></textarea>
           </div>
           <input type="submit" value="Envoyer">
         </form>
