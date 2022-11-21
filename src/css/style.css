@@ -470,6 +470,7 @@ footer div:nth-child(2) p:nth-child(2) {
 }
 #presentation div:nth-child(3) img {
   width: 50px;
+  border-radius: 999px;
 }
 /* galery */
 #galery .galery {
@@ -639,4 +640,5 @@ footer div:nth-child(2) p:nth-child(2) {
 }
 .all ul li img {
   width: 50px;
+  border-radius: 999px;
 }

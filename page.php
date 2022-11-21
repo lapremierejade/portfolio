@@ -48,7 +48,7 @@ $tabTitle = explode('-', $creation['title']);
     <h3>Galerie</h3>
     <div class="galery">
       <?php foreach ($tabNumVideos as $numVideo) {
-        if ($numVideo = 0) {
+        if ($numVideo != 0) {
           $videoSelect = $db->prepare('SELECT * FROM videos WHERE id = ?');
           $videoSelect->execute(array($numVideo));
           $video = $videoSelect->fetch();
