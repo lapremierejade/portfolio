@@ -65,7 +65,7 @@
             </div>
             <div class="text">
               <h5>Photoshop</h5>
-              <p>⭐⭐⭐⭐⭐</p>
+              <p>⭐⭐⭐</p>
             </div>
           </div>
           <div class="about-skill">
@@ -74,7 +74,7 @@
             </div>
             <div class="text">
               <h5>Illustrator</h5>
-              <p>⭐⭐⭐⭐⭐</p>
+              <p>⭐⭐⭐⭐</p>
             </div>
           </div>
           <div class="about-skill">
@@ -83,7 +83,7 @@
             </div>
             <div class="text">
               <h5>Premiere Pro</h5>
-              <p>⭐⭐⭐⭐⭐</p>
+              <p>⭐⭐⭐</p>
             </div>
           </div>
           <div class="about-skill">
@@ -92,7 +92,7 @@
             </div>
             <div class="text">
               <h5>InDesign</h5>
-              <p>⭐⭐⭐⭐⭐</p>
+              <p>⭐⭐⭐⭐</p>
             </div>
           </div>
           <div class="about-skill">
@@ -101,7 +101,7 @@
             </div>
             <div class="text">
               <h5>Microsoft Office</h5>
-              <p>⭐⭐⭐⭐⭐</p>
+              <p>⭐⭐⭐⭐</p>
             </div>
           </div>
           <div class="about-skill">
@@ -110,7 +110,7 @@
             </div>
             <div class="text">
               <h5>Appareil photo et caméra</h5>
-              <p>⭐⭐⭐⭐⭐</p>
+              <p>⭐⭐⭐</p>
             </div>
           </div>
         </div>
