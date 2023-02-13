@@ -42,7 +42,7 @@
     <div class="about-tab">
       <div class="about-case about-case-1">
         <h4>Présentation</h4>
-        <p>Je m'appelle Jade, j’ai actuellement 20 ans. J’habite dans la région Occitanie mais j’ai la possibilité de me déplacer en Nouvelle-Aquitaine mais aussi en région PACA. Je suis titulaire du permis B et véhiculée. Je suis en deuxième année de Bachelor dans les Métiers du Multimédia et de l’Internet en alternance. Cette dernière se déroule dans une concession automobile. Je réalise leur communication sur les réseaux sociaux pour une durée de 2 ans.</p>
+        <p>Je m'appelle Jade, j’ai actuellement 20 ans. J’habite dans la région Occitanie mais j’ai la possibilité de me déplacer en Nouvelle-Aquitaine mais aussi en région PACA. Je suis titulaire du permis B et véhiculée. Je suis en deuxième année de Bachelor dans les Métiers du Multimédia et de l’Internet.</p>
       </div>
       <div class="about-case about-case-2">
         <h4>Mes passions</h4>
